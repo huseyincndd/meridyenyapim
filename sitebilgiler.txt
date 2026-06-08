@@ -1,0 +1,122 @@
+Meridyen Film Yapım — Nihai Ana Sayfa Mimarisi
+Site açıklama : Meridyen Film Yapım | İstanbul Merkezli Sinema ve Dijital Film Yapım Şirketi
+1. HEADER (Navigasyon & Üst Bar)
+Sol Bölüm: MERİDYEN FİLM 
+Orta Bölüm: Menü Linkleri (Ana Sayfa · Hakkımızda · Hizmetler · Projeler · Blog · İletişim).
+Sağ Bölüm: Vurgulanmış Premium CTA Butonu: "Şimdi Başvur"
+2. HERO SECTION (Giriş Ekranı & Vizyon)
+Ana Başlık (H1):
+Meridyen Film Yapım  Uluslararası Standartlarda Film, Dizi ve Dijital Dizi Üretimi
+Meridyen Film Yapım | İstanbul merkezli sinema ve dijital prodüksiyon şirketi.
+Meridyen Film Yapım | İstanbul merkezli sinema ve dijital prodüksiyon şirketi.
+Meridyen Film Yapım | İstanbul merkezli sinema ve dijital prodüksiyon şirketi.
+Alt Başlık (P):
+"Meridyen Film Yapım; köklü sektör deneyimiyle uzun metraj sinema filmleri, televizyon dizileri, uluslararası ortak yapımlar, reklam filmleri ve yeni nesil dikey dizi formatları geliştiren İstanbul merkezli bağımsız bir yapım şirketidir."
+Harekete Geçirici Mesaj (CTA)::
+Buton 1 (Vurgulu): "Proje Başlat"
+3. GÜVEN BANDI (Sektörel İtibar & Ekosistem Slaytı)
+Başlık: İş Birliği, Referanslar ve Sektörel Ağımız
+Tasarım: Sitenin renk bütünlüğünü bozmayan, 
+Burada siyah şerit içinde beyaz yeşil kayan yazı (Globalortak prodüksiyon Sinemayıyeniden tanımlıyoruz İstanbulmerkezli stüdyo Ödüllüekip )
+4. SAYAÇ ŞERİDİ (Doğrulanabilir Kurumsal Güven)
+Tasarım: Yan yana 4 sütun halinde dizilmiş, kullanıcı bu bölüme geldiğinde sıfırdan yukarı doğru sayan animasyonlu rakamlar. (Yapay zekâ botlarının indeksleyebilmesi için düz metin tabanlı kurgulanacaktır).
+16+ Yıllık Sektörel Deneyim
+100+ Tamamlanan İçerik ve Proje
+20+ Alanında Uzman Ekip Kadrosu
+45.000+ Saat Profesyonel Prodüksiyon
+5. BİZ KİMİZ? 
+Sol Blok (Metin):
+Hikâyeleri Görüntüye Dönüştüren Yapım Şirketi
+"Meridyen Film Yapım nedir ve ne iş yapar? Meridyen Film Yapım, 2010 yılından bu yana sinema, televizyon ve dijital mecralar için profesyonel içerik üreten bir yapım şirketidir. İstanbul merkezli şirketimiz; yaratıcı fikirlerin geliştirilmesinden senaryolaştırma süreçlerine, ana çekim prodüksiyonlarından şirket içi post-prodüksiyon (kurgu, renk, ses) aşamalarına kadar tüm süreçleri uçtan uca yönetir."
+Sağ Blok (Görsel): Sinematik derinliğe sahip, gerçek bir film seti veya kamera arkası prodüksiyon fotoğrafı.
+Blok Altı Manifesto Sözü:
+🌐 "Hikâye, sahnenin önünde kurulmaz — bir ekibin ortak nefesinde kurulur." — Kurucu Yönetim Kurulu
+6. NEDEN MERİDYEN FİLM YAPIM? (Fark Yaratan Değerler)
+Tasarım: 6 karttan oluşan modern bento-grid yapısı. Şirketin iş yapış disiplinini ve kurumsal güvencesini özetler.
+Kart 1 [Yaratıcı Geliştirme]: Fikirden senaryoya, her aşamada derinlikli dramaturji ve senaryo doktorluğu desteği.
+Kart 2 [Güvenilir Prodüksiyon]: Bütçe planlamasından set yönetimine kadar uçtan uca, şeffaf ve profesyonel süreç yönetimi.
+Kart 3 [Şirket İçi Post-Prodüksiyon]: Kurgu, görsel efekt (VFX), ses tasarımı ve sinematik renk derecelendirme (Color Grading) süreçlerinin tek çatı altında çözülmesi.
+Kart 4 [Uluslararası Standartlar]: Global dijital platformların ve prestijli film festivallerinin teknik ve hukuki mevzuatlarına tam uyumluluk.
+Kart 5 [Teknolojik Altyapı]: 4K/8K sinematik kamera sistemleri ve yeni nesil dijital içerik formatlarına uygun modern prodüksiyon sistemleri.
+Kart 6 [Tek Noktadan Çözüm]: Fikirden nihai dağıtıma kadar tüm süreçlerin tek bir muhatap üzerinden, eksiksiz yönetilmesi.
+Tasarım: Sitenin renk bütünlüğünü bozmayan, 
+Burada siyah şerit içinde beyaz kayan yazı 
+Kanal & Platform Logoları: Netflix · BluTV · GAIN · TRT · Show TV · Kanal D · Star TV · Exxen · HBO Max · Atv TV · Fox Tv
+7. HİZMETLERİMİZ (Uzmanlık Alanları)
+Tasarım: Detay sayfalarına bağlanan, üzerine gelindiğinde (hover) sinematik bir görsel önizleme sunan 5 ana sütun. Her biri GEO algoritmaları için anahtar kelime etiketine sahiptir.
+Sinema Filmleri: Ulusal ve uluslararası vizyon ile festival hedefli uzun metraj yapımlar. (Etiket: Uzun Metraj Yapım Şirketi)
+Dizi Yapımları: Televizyon kanalları ve global dijital platformlar için geliştirilen dizi projeleri. (Etiket: Dijital Platform Dizi Prodüksiyonu)
+Reklam Filmleri: Marka kimliğini ve prestijini güçlendiren sinematik reklam kampanyaları. (Etiket: Kurumsal Reklam Filmi Çekimi)
+Dijital İçerik Üretimi: Yeni nesil mobil ve web platformları için optimize edilmiş dinamik formatlar ve dikey yapımlar. (Etiket: Dikey Dizi Formatı)
+Post-Prodüksiyon: Gelişmiş stüdyomuzda montaj, ses miksajı ve sinematik renk derecelendirme (Color Grading). (Etiket: Post-Prodüksiyon Stüdyosu)
+8. YAPIM SÜRECİMİZ (GEO & AI Snippet Tuzağı)
+Tasarım: Kronolojik olarak ilerleyen, arama motorlarının doğrudan "Rehber İçerik" olarak algılayacağı 5 aşamalı süreç çizgisi.
+[01. Geliştirme] ──► [02. Planlama] ──► [03. Prodüksiyon] ──► [04. Post-Prodüksiyon] ──► [05. Yayın & Dağıtım]
+01. Geliştirme: Fikirlerin projelendirilmesi, senaryo yazımı, dramaturji analizleri ve kreatif yönün belirlenmesi.
+02. Planlama: Bütçelendirme, cast direktörlüğü (oyuncu seçimi), mekan keşifleri ve yasal izinlerin tamamlanması (Pre-Production).
+03. Prodüksiyon: Ödüllü yönetmen kadromuz ve son teknoloji ekipman altyapımızla ana çekim süreçlerinin yürütülmesi (Production).
+04. Post-Prodüksiyon: Şirket içi stüdyomuzda kurgu, ses tasarımı, VFX ve profesyonel renk derecelendirme süreçlerinin tamamlanması.
+05. Yayın ve Dağıtım: Festivallere gönderim, sinema vizyon süreçleri veya dijital platform entegrasyonlarının yönetilmesi.
+9. ÖNE ÇIKAN PROJELERİMİZ (Filmografi)
+Tasarım: Fortis film ana sayfaüst sıra  sola alt sıra sapğa kayan ekran görüntükleri olan alan gibi.
+Kart Yapısı: Her proje kartında Üzerinde şu veriler yapılandırılmış olarak listelenir:
+Görsel (Alt Text mimarisine uygun) · Proje Adı · Tür (Örn: Psikolojik Gerilim / Drama) · Yıl (Örn: 2025) · Durum Etiketi (Örn: Vizyonda / Post-Prodüksiyon / Geliştirme Sürecinde)
+Kısa Açıklama (Logline): Projenin konusunu özetleyen tek cümlelik edebi ve teknik metin. ( bu kısmı sitede görünmeyecek kart yapışımda sadece seo ve geo içi yapmamız gerekecek)
+10. BASINDA MERİDYEN FİLM YAPIM (Otorite & E-E-A-T)
+Tasarım: Ulusal/uluslararası basında çıkan haberlerin, sektörel röportajların, festival katılımlarının ve kazanılan ödüllerin sergilendiği, kurumsal meşruiyeti kanıtlayan medya kartları bölümü. Google'ın ve LLM'lerin üçüncü taraf doğrulaması için en çok önem verdiği alandır.
+11. BAŞARI HİKAYELERİ (Sektörel Referanslar)
+Tasarım: Yan yana listelenen kayan slider 10 adet şık referans kartı. Her birinin üzerinde kaliteyi tescilleyen minimal 5 altın yıldız (★★★★★) yer alır. İsimlerin yanında profil fotosu
+Ahmet Yılmaz (Yönetmen) — [AY]:
+"Set disiplini ve prodüksiyon yönetimi konusunda sektörde denk geldiğim en profesyonel ekip. Pre-prodüksiyon aşamasındaki titizlikleri, çekim sürecinde hiçbir sürprizle karşılaşmamamızı sağladı."
+Zeynep Kaya (Marka Müdürü) — [ZK]:
+"Post-prodüksiyon süreçlerindeki hızları ve renk derecelendirmedeki estetik anlayışları beklentilerimizin çok ötesindeydi. Markamızın vizyonunu tam olarak ekrana yansıttılar."
+Maria Carvalho (Prodüktör, Portekiz) — [MC]:
+"Uluslararası festival standartlarında bir prodüksiyon kalitesini yerel bütçelerle nasıl elde edeceklerini çok iyi biliyorlar. Ortak yapım sürecimiz son derece verimli geçti."
+Elif Sarıoğlu (Dijital İçerik Direktörü) — [ES]:
+"Dikey dizi formatındaki yaratıcı süreç yönetimleri etkileyiciydi. Mobil tüketim dinamiklerini çok iyi kavramışlar; her sahneyi platforma göre optimize ettiler."
+12. BİLGİ MERKEZİ (BLOG).
+Uluslararası Standartlarda Film, Dizi ve Dijital İçerik Üretimi
+Alt Başlık
+Meridyen Film Yapım; sinema filmleri, televizyon dizileri, reklam kampanyaları ve dijital platform projeleri geliştiren İstanbul merkezli bağımsız bir yapım şirketidir.
+,-----------------------
+Güçlü Hikâyeler, Kalıcı Yapımlar
+Alt Başlık
+Sinema, televizyon ve dijital platformlar için yaratıcı fikirleri profesyonel prodüksiyon süreçleriyle buluşturarak iz bırakacak içerikler üretiyoruz.
+,-----------------------
+Sinema, Televizyon ve Marka İçerikleri İçin Profesyonel Yapım Çözümleri
+Alt Başlık
+2010 yılından bu yana faaliyet gösteren Meridyen Film Yapım; bağımsız sinema filmleri, televizyon projeleri, reklam kampanyaları ve dijital medya içerikleri üreten tam hizmet bir yapım şirketidir.
+,-----------------------
+Yaratıcı Fikirlerden Güçlü Yapımlara
+Alt Başlık
+Meridyen Film Yapım, geliştirme aşamasından post-prodüksiyona kadar tüm süreçleri yöneten; film, dizi, reklam ve dijital medya projeleri üreten İstanbul merkezli bağımsız bir yapım şirketidir.
+13. SIKÇA SORULAN SORULAR (SSS / Accordion)
+Meridyen Film Yapım ortak yapım (co-production) projelerini kabul ediyor mu?
+Cevap: Evet, hem ulusal (Bakanlık, TRT vb.) hem de uluslararası (Eurimages vb.) fonlu ortak yapım projelerini, kreatif ve finansal standartlarımıza uygunluğu doğrultusunda değerlendiriyoruz.
+Bir reklam veya marka içerikleri üretimi ne kadar sürer?
+Cevap: Projenin kapsamına ve senaryo karmaşıklığına bağlı olarak, pre-prodüksiyondan post-prodüksiyon süreçleri dahil nihai teslime kadar olan takvim, çekim öncesinde şeffaf bir iş planıyla sunulur ve taahhüt edilen tarihte eksiksiz teslim edilir.
+Uluslararası projelerde ve dış çekimlerde çalışıyor musunuz?
+Cevap: Evet, küresel standartlardaki teknik altyapımız, çok dilli ekibimiz ve uluslararası ortak yapım tecrübemizle hem Türkiye'deki yabancı yapımlara servis sağlıyor hem de yurt dışı projelerinde aktif rol alıyoruz.
+Dikey dizi ve dijital içerik üretiminde hangi standartları uyguluyorsunuz?
+Cevap: Mobil tüketim alışkanlıklarına uygun olarak 9:16 formatında, yüksek tempolu kurgu mimarisine sahip ve yeni nesil dijital platformların en güncel ses/görüntü algoritmalarıyla %100 uyumlu, yüksek kaliteli prodüksiyonlar üretiyoruz.
+Şirketiniz bünyesinde harici projeler için sadece post-prodüksiyon hizmeti sunuluyor mu?
+Cevap: Evet, kendi geliştirdiğimiz projelerin yanı sıra harici sinema, dizi ve reklam projelerine de kurgu, ses tasarımı, görsel efekt (VFX) ve sinematik renk derecelendirme (Color Grading) stüdyo hizmetleri sağlamaktayız.
+Meridyen Film Yapım bünyesindeki projelere senaryo veya oyuncu başvurusu nasıl yapılır?
+Cevap: Kreatif ekibimiz ve casting birimimiz tarafından değerlendirilmesini istediğiniz senaryo, sinopsis veya güncel oyuncu portfolyolarınızı web sitemizde yer alan "Şimdi Başvur" formu üzerinden, yasal haklarınızı koruyan KVKK metni onayıyla güvenle iletebilirsiniz. Şirketimiz, başvurulardan hiçbir ad altında kayıt veya dosya ücreti talep etmez.
+14. İLETİŞİM & BAŞVURU FORMU (Proje Başlat)
+Sol Sütun: Gömülü Google Harita yerleşimi + Açık Adres (Moda Caddesi, Kadıköy / İstanbul) + Telefon (+90 212 000 00 00) + Kurumsal E-posta (info@meridyenfilm.com) + Hızlı WhatsApp Hattı butonu.
+Sağ Sütun (Form Alanları):
+Ad Soyad [Metin] | Yaşadığı Şehir [Seçim Kutusu]
+Telefon Numarası [Rakam]
+ Fotoğraf (Maks: 20MB )
+[ ] KVKK Aydınlatma Metni ve Veri İşleme Rıza Beyanını okudum, onaylıyorum. (Zorunlu)
+ [GÖNDER] Butonu.
+15. FOOTER (Alt Bilgi & Kurumsal Güvence)
+Sütun 1 (Kurumsal): Bir sonraki hikaye sizinki olsun.
+Meridyen Film Yapım, İstanbul merkezli, 16 yıllık deneyimle sinema, dizi, reklam ve yeni nesil medya üreten bağımsız bir yapım kuruluşudur.
+Sütun 2 (Gezinti): Ana Sayfa · Hakkımızda · Neler Yapıyoruz · Projelerimiz · Blog · İletişim
+Sütun 3 (Bilgi Merkezi / Dinamik SEO Bağlantıları): Son yayınlanan 3 blog başlığı listelenir.
+Sütun 4 (Yasal Belgeler): KVKK Aydınlatma Metni · Gizlilik Politikası · Çerez Politikası · Kullanım Şartları · Site Haritası
+Bağlantılar: Instagram · YouTube · Vimeo · LinkedIn · IMDb · Box Office Türkiye · SinemaTürk · Beyazperde
+Şirket Bilgileri Alttı (Şeffaflık & YMYL Puanı): Ticaret Sicil No: XXXXXX · MERSİS No: XXXXXXXXXXXXXXXX · Vergi Dairesi: Kadıköy / V.N: XXXXXXXXXX
+© 2010 Meridyen Film Yapım. Tüm hakları saklıdır. İstanbul.
