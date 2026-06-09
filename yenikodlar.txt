@@ -1,0 +1,1620 @@
+componentsler:
+
+
+Navbar.tsx:
+
+import { useEffect, useState } from "react";
+
+const links = [
+  { label: "Ana Sayfa", href: "#top" },
+  { label: "Hakkımızda", href: "#hakkimizda" },
+  { label: "Hizmetler", href: "#hizmetler" },
+  { label: "Projeler", href: "#projeler" },
+  { label: "Blog", href: "#blog" },
+  { label: "İletişim", href: "#iletisim" },
+];
+
+export function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <header
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "backdrop-blur-xl bg-background/80 border-b border-border"
+          : "bg-background/60"
+      }`}
+    >
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4">
+        <a href="#top" className="flex items-center gap-2.5">
+          <svg width="34" height="34" viewBox="0 0 40 40" className="text-foreground" aria-hidden>
+            <path
+              d="M4 32 V8 L20 24 L36 8 V32"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="3"
+              strokeLinejoin="round"
+              strokeLinecap="round"
+            />
+          </svg>
+          <span className="font-display text-base tracking-[-0.02em] md:text-lg">
+            MERİDYEN FİLM
+          </span>
+        </a>
+
+        <nav className="hidden items-center gap-8 lg:flex">
+          {links.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
+            >
+              {l.label}
+            </a>
+          ))}
+        </nav>
+
+        <a
+          href="#iletisim"
+          className="group inline-flex items-center gap-2 rounded-full lime-pill px-5 py-2.5 text-sm font-semibold shadow-[0_10px_30px_-12px_oklch(0.92_0.22_130/0.8)] transition-transform hover:scale-[1.03]"
+        >
+          Şimdi Başvur
+          <span className="grid h-6 w-6 place-items-center rounded-full bg-background text-foreground transition-transform group-hover:rotate-45">
+            ↗
+          </span>
+        </a>
+      </div>
+    </header>
+  );
+}
+
+
+Hero.tsx:
+
+export function Hero() {
+  return (
+    <section id="top" className="relative overflow-hidden bg-waves">
+      <div className="pointer-events-none absolute inset-0 bg-grid opacity-60" />
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 pb-24 pt-16 md:pt-24 lg:grid-cols-[320px_1fr] lg:gap-16">
+        {/* Left identity */}
+        <div className="flex flex-col gap-8">
+          <div className="flex items-center gap-4">
+            <div className="relative h-16 w-16 overflow-hidden rounded-full ring-2 ring-background">
+              <img
+                src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=400&auto=format&fit=crop"
+                alt="Meridyen Film stüdyosu"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div>
+              <div className="font-display text-lg">Meridyen Film</div>
+              <div className="text-sm text-muted-foreground">
+                Sinema · Dizi · Dijital Yapım
+              </div>
+            </div>
+          </div>
+          <div className="hidden text-sm text-muted-foreground lg:block">
+            (2010 — BUGÜN) · İSTANBUL
+          </div>
+        </div>
+
+        {/* Headline */}
+        <div className="flex flex-col gap-10">
+          <div className="inline-flex w-fit items-center gap-2 text-sm">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-70" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-primary" />
+            </span>
+            <span className="text-foreground/80">
+              Yeni proje başvuruları açık
+            </span>
+          </div>
+
+          <h1 className="font-display text-[40px] leading-[1.02] tracking-[-0.04em] text-foreground md:text-6xl lg:text-[76px]">
+            <span className="inline-flex items-center rounded-full bg-card px-5 py-1 align-middle text-[0.9em] shadow-sm ring-1 ring-border">
+              Meridyen Film
+            </span>{" "}
+            —{" "}
+            <span className="inline-flex items-center rounded-full ink-pill px-5 py-1 align-middle text-[0.9em]">
+              Uluslararası
+            </span>{" "}
+            standartlarda film, dizi ve{" "}
+            <span className="inline-flex items-center rounded-full bg-card px-5 py-1 align-middle text-[0.9em] ring-1 ring-border">
+              dijital
+            </span>{" "}
+            yapım üretimi.
+          </h1>
+
+          <p className="max-w-2xl text-base text-muted-foreground md:text-lg">
+            Meridyen Film Yapım; köklü sektör deneyimiyle uzun metraj sinema
+            filmleri, televizyon dizileri, uluslararası ortak yapımlar, reklam
+            filmleri ve yeni nesil dikey dizi formatları geliştiren İstanbul
+            merkezli bağımsız bir yapım şirketidir.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-4">
+            <a
+              href="#iletisim"
+              className="group inline-flex items-center gap-3 rounded-full lime-pill px-6 py-3.5 text-sm font-semibold shadow-[0_10px_40px_-10px_oklch(0.92_0.22_130/0.7)] transition-transform hover:scale-[1.03]"
+            >
+              Proje Başlat
+              <span className="grid h-7 w-7 place-items-center rounded-full bg-background text-foreground transition-transform group-hover:rotate-45">
+                ↗
+              </span>
+            </a>
+            <a
+              href="#projeler"
+              className="rounded-full border border-border bg-card px-6 py-3.5 text-sm font-medium transition-colors hover:bg-secondary"
+            >
+              Projelerimiz
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
+TrustBand.tsx:
+
+const platforms = [
+  "Netflix",
+  "BluTV",
+  "GAIN",
+  "TRT",
+  "Show TV",
+  "Kanal D",
+  "Star TV",
+  "Exxen",
+  "HBO Max",
+  "ATV",
+  "Fox TV",
+];
+
+export function TrustBand() {
+  const row = [...platforms, ...platforms, ...platforms];
+  return (
+    <section
+      aria-label="İş Birliği, Referanslar ve Sektörel Ağımız"
+      className="border-y border-border bg-card"
+    >
+      <div className="mx-auto max-w-7xl px-6 py-10">
+        <div className="mb-6 text-center text-xs uppercase tracking-[0.25em] text-muted-foreground">
+          İş Birliği, Referanslar ve Sektörel Ağımız
+        </div>
+        <div className="relative overflow-hidden">
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-card to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-card to-transparent" />
+          <div className="flex w-max animate-marquee gap-14 whitespace-nowrap">
+            {row.map((p, i) => (
+              <span
+                key={i}
+                className="font-display text-xl tracking-[-0.02em] text-foreground/55 md:text-2xl"
+              >
+                {p}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
+Counters.tsx:
+
+import { useEffect, useRef, useState } from "react";
+
+const stats = [
+  { value: 16, suffix: "+", label: "Yıllık Sektörel Deneyim" },
+  { value: 100, suffix: "+", label: "Tamamlanan İçerik ve Proje" },
+  { value: 20, suffix: "+", label: "Alanında Uzman Ekip Kadrosu" },
+  { value: 45000, suffix: "+", label: "Saat Profesyonel Prodüksiyon" },
+];
+
+function Counter({ target, suffix }: { target: number; suffix: string }) {
+  const [val, setVal] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+  const started = useRef(false);
+  useEffect(() => {
+    if (!ref.current) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting && !started.current) {
+            started.current = true;
+            const duration = 1600;
+            const start = performance.now();
+            const tick = (t: number) => {
+              const p = Math.min(1, (t - start) / duration);
+              const eased = 1 - Math.pow(1 - p, 3);
+              setVal(Math.round(target * eased));
+              if (p < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+          }
+        });
+      },
+      { threshold: 0.4 },
+    );
+    io.observe(ref.current);
+    return () => io.disconnect();
+  }, [target]);
+  return (
+    <span ref={ref} className="font-display text-5xl tracking-[-0.04em] md:text-7xl">
+      {val.toLocaleString("tr-TR")}
+      {suffix}
+    </span>
+  );
+}
+
+export function Counters() {
+  return (
+    <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+      <div className="grid grid-cols-2 gap-y-10 md:grid-cols-4">
+        {stats.map((s) => (
+          <div key={s.label} className="flex flex-col items-start gap-3 border-l border-border pl-6">
+            <Counter target={s.value} suffix={s.suffix} />
+            <span className="max-w-[200px] text-sm text-muted-foreground">{s.label}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+
+About.tsx:
+
+export function About() {
+  return (
+    <section id="hakkimizda" className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
+        <div>
+          <div className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            <span className="h-2 w-2 rounded-full bg-primary" /> Biz Kimiz?
+          </div>
+          <h2 className="font-display text-4xl leading-[1.05] tracking-[-0.035em] md:text-5xl lg:text-6xl">
+            Hikâyeleri görüntüye dönüştüren{" "}
+            <span className="italic font-serif text-muted-foreground">
+              yapım şirketi.
+            </span>
+          </h2>
+          <p className="mt-8 text-base text-muted-foreground md:text-lg">
+            Meridyen Film Yapım, 2010 yılından bu yana sinema, televizyon ve
+            dijital mecralar için profesyonel içerik üreten bir yapım şirketidir.
+            İstanbul merkezli şirketimiz; yaratıcı fikirlerin geliştirilmesinden
+            senaryolaştırma süreçlerine, ana çekim prodüksiyonlarından şirket içi
+            post-prodüksiyon (kurgu, renk, ses) aşamalarına kadar tüm süreçleri
+            uçtan uca yönetir.
+          </p>
+          <figure className="mt-10 rounded-3xl border border-border bg-card p-6 md:p-8">
+            <blockquote className="font-serif text-2xl italic leading-snug md:text-3xl">
+              "Hikâye, sahnenin önünde kurulmaz — bir ekibin ortak nefesinde
+              kurulur."
+            </blockquote>
+            <figcaption className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              — Kurucu Yönetim Kurulu
+            </figcaption>
+          </figure>
+        </div>
+        <div className="relative">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-border">
+            <img
+              src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1400&auto=format&fit=crop"
+              alt="Meridyen Film prodüksiyon seti — anamorfik kamera"
+              className="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-foreground px-5 py-4 text-background shadow-xl md:block">
+            <div className="font-display text-3xl">16+</div>
+            <div className="text-xs uppercase tracking-wider opacity-80">
+              yıllık deneyim
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
+WhyUs.tsx:
+
+const cards = [
+  {
+    n: "01",
+    title: "Yaratıcı Geliştirme",
+    desc: "Fikirden senaryoya, her aşamada derinlikli dramaturji ve senaryo doktorluğu desteği.",
+  },
+  {
+    n: "02",
+    title: "Güvenilir Prodüksiyon",
+    desc: "Bütçe planlamasından set yönetimine kadar uçtan uca, şeffaf ve profesyonel süreç yönetimi.",
+  },
+  {
+    n: "03",
+    title: "Şirket İçi Post-Prodüksiyon",
+    desc: "Kurgu, VFX, ses tasarımı ve sinematik renk derecelendirmenin tek çatı altında çözülmesi.",
+  },
+  {
+    n: "04",
+    title: "Uluslararası Standartlar",
+    desc: "Global dijital platformların ve festivallerin teknik ve hukuki mevzuatlarına tam uyumluluk.",
+  },
+  {
+    n: "05",
+    title: "Teknolojik Altyapı",
+    desc: "4K/8K sinematik kamera sistemleri ve yeni nesil dijital içerik formatlarına uygun altyapı.",
+  },
+  {
+    n: "06",
+    title: "Tek Noktadan Çözüm",
+    desc: "Fikirden nihai dağıtıma kadar tüm süreçlerin tek bir muhatap üzerinden eksiksiz yönetilmesi.",
+  },
+];
+
+export function WhyUs() {
+  return (
+    <section id="neden" className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+      <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
+        <div>
+          <div className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            <span className="h-2 w-2 rounded-full bg-primary" /> Neden Meridyen?
+          </div>
+          <h2 className="font-display text-4xl tracking-[-0.035em] md:text-6xl">
+            Fark yaratan{" "}
+            <span className="italic font-serif text-muted-foreground">değerler.</span>
+          </h2>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {cards.map((c, i) => (
+          <article
+            key={c.n}
+            className={`group flex flex-col justify-between rounded-3xl border border-border p-7 transition-all hover:-translate-y-1 ${
+              i === 0 || i === 5
+                ? "bg-foreground text-background lg:col-span-2"
+                : "bg-card"
+            } ${i === 3 ? "lg:col-span-2" : ""}`}
+          >
+            <div>
+              <div className="font-display text-5xl opacity-40">{c.n}</div>
+              <h3 className="mt-6 font-display text-2xl md:text-3xl">{c.title}</h3>
+              <p className="mt-3 max-w-md text-sm opacity-75 md:text-base">{c.desc}</p>
+            </div>
+            <div className="mt-8 inline-flex h-9 w-9 items-center justify-center rounded-full border border-current/30 text-lg transition-transform group-hover:rotate-45">
+              ↗
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+
+Services.tsx:
+
+const services = [
+  {
+    n: "01",
+    title: "Sinema Filmleri",
+    tag: "Uzun Metraj Yapım Şirketi",
+    desc: "Ulusal ve uluslararası vizyon ile festival hedefli uzun metraj yapımlar.",
+    img: "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1400&auto=format&fit=crop",
+  },
+  {
+    n: "02",
+    title: "Dizi Yapımları",
+    tag: "Dijital Platform Dizi Prodüksiyonu",
+    desc: "Televizyon kanalları ve global dijital platformlar için dizi projeleri.",
+    img: "https://images.unsplash.com/photo-1518929458119-e5bf444c30f4?q=80&w=1400&auto=format&fit=crop",
+  },
+  {
+    n: "03",
+    title: "Reklam Filmleri",
+    tag: "Kurumsal Reklam Filmi Çekimi",
+    desc: "Marka kimliğini ve prestijini güçlendiren sinematik reklam kampanyaları.",
+    img: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1400&auto=format&fit=crop",
+  },
+  {
+    n: "04",
+    title: "Dijital İçerik Üretimi",
+    tag: "Dikey Dizi Formatı",
+    desc: "Mobil ve web platformları için optimize edilmiş dinamik formatlar ve dikey yapımlar.",
+    img: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1400&auto=format&fit=crop",
+  },
+  {
+    n: "05",
+    title: "Post-Prodüksiyon",
+    tag: "Post-Prodüksiyon Stüdyosu",
+    desc: "Stüdyomuzda montaj, ses miksajı ve sinematik renk derecelendirme (Color Grading).",
+    img: "https://images.unsplash.com/photo-1601506521937-0121a7fc2a6b?q=80&w=1400&auto=format&fit=crop",
+  },
+];
+
+export function Services() {
+  return (
+    <section id="hizmetler" className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+      <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
+        <div>
+          <div className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            <span className="h-2 w-2 rounded-full bg-primary" /> Hizmetlerimiz
+          </div>
+          <h2 className="font-display text-4xl tracking-[-0.035em] md:text-6xl">
+            Uzmanlık{" "}
+            <span className="italic font-serif text-muted-foreground">alanlarımız.</span>
+          </h2>
+        </div>
+        <a
+          href="#iletisim"
+          className="rounded-full border border-border bg-card px-5 py-2.5 text-sm hover:bg-secondary"
+        >
+          Daha Fazlası →
+        </a>
+      </div>
+
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        {services.map((s) => (
+          <article
+            key={s.n}
+            className="group relative flex flex-col overflow-hidden rounded-3xl border border-border bg-card transition-colors hover:border-foreground/30"
+          >
+            <div className="relative aspect-[4/5] overflow-hidden">
+              <img
+                src={s.img}
+                alt={s.title}
+                loading="lazy"
+                className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+              />
+              <span className="absolute left-4 top-4 rounded-full bg-background/90 px-3 py-1 font-display text-sm backdrop-blur">
+                {s.n}
+              </span>
+            </div>
+            <div className="flex flex-1 flex-col p-5">
+              <h3 className="font-display text-xl md:text-2xl">{s.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
+              <span className="mt-4 inline-block w-fit rounded-full border border-border px-3 py-1 text-[11px] uppercase tracking-wider text-muted-foreground">
+                {s.tag}
+              </span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+Process.tsx:
+const steps = [
+  {
+    n: "01",
+    title: "Geliştirme",
+    desc: "Fikirlerin projelendirilmesi, senaryo yazımı, dramaturji analizleri ve kreatif yönün belirlenmesi.",
+  },
+  {
+    n: "02",
+    title: "Planlama",
+    desc: "Bütçelendirme, cast direktörlüğü, mekan keşifleri ve yasal izinlerin tamamlanması (Pre-Production).",
+  },
+  {
+    n: "03",
+    title: "Prodüksiyon",
+    desc: "Ödüllü yönetmen kadromuz ve son teknoloji ekipmanlarla ana çekim süreçlerinin yürütülmesi.",
+  },
+  {
+    n: "04",
+    title: "Post-Prodüksiyon",
+    desc: "Stüdyomuzda kurgu, ses tasarımı, VFX ve profesyonel renk derecelendirme süreçlerinin tamamlanması.",
+  },
+  {
+    n: "05",
+    title: "Yayın & Dağıtım",
+    desc: "Festivallere gönderim, sinema vizyon süreçleri veya dijital platform entegrasyonlarının yönetimi.",
+  },
+];
+
+export function Process() {
+  return (
+    <section id="surec" className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+      <div className="mb-14">
+        <div className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+          <span className="h-2 w-2 rounded-full bg-primary" /> Yapım Sürecimiz
+        </div>
+        <h2 className="font-display text-4xl tracking-[-0.035em] md:text-6xl">
+          Fikirden vizyona,{" "}
+          <span className="italic font-serif text-muted-foreground">beş aşama.</span>
+        </h2>
+      </div>
+
+      <ol className="relative grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-5">
+        {steps.map((s, i) => (
+          <li
+            key={s.n}
+            className={`group relative overflow-hidden rounded-3xl border border-border p-6 transition-all hover:-translate-y-1 ${
+              i % 2 === 1 ? "bg-foreground text-background" : "bg-card"
+            }`}
+          >
+            <div className="font-display text-5xl opacity-40">{s.n}</div>
+            <h3 className="mt-6 font-display text-xl md:text-2xl">{s.title}</h3>
+            <p className="mt-3 text-sm opacity-75">{s.desc}</p>
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
+}
+
+Projects.tsx:
+const top = [
+  {
+    title: "Kuzey Rüzgârı",
+    type: "Drama / Uzun Metraj",
+    year: "2025",
+    status: "Vizyonda",
+    img: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    title: "Karanlık Saat",
+    type: "Psikolojik Gerilim",
+    year: "2025",
+    status: "Post-Prodüksiyon",
+    img: "https://images.unsplash.com/photo-1542204165-65bf26472b9b?q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    title: "İstanbul Meridyeni",
+    type: "Belgesel Dizi",
+    year: "2024",
+    status: "Yayında",
+    img: "https://images.unsplash.com/photo-1518132006221-e3eaa0aa1e85?q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    title: "Son Perde",
+    type: "Dram / Dizi",
+    year: "2024",
+    status: "Yayında",
+    img: "https://images.unsplash.com/photo-1604975999044-188783d54fb3?q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    title: "Sahne Arkası",
+    type: "Belgesel",
+    year: "2023",
+    status: "Festival",
+    img: "https://images.unsplash.com/photo-1500210600060-44b6bbf83f43?q=80&w=1200&auto=format&fit=crop",
+  },
+];
+
+const bottom = [
+  {
+    title: "Anadolu Hikâyeleri",
+    type: "Antoloji Dizi",
+    year: "2025",
+    status: "Geliştirme",
+    img: "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    title: "Mavi Saat",
+    type: "Romantik Drama",
+    year: "2024",
+    status: "Vizyonda",
+    img: "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    title: "Dikey Hikâyeler",
+    type: "Dikey Dizi",
+    year: "2025",
+    status: "Yayında",
+    img: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    title: "Beyoğlu Geceleri",
+    type: "Suç / Dram",
+    year: "2024",
+    status: "Post-Prodüksiyon",
+    img: "https://images.unsplash.com/photo-1518929458119-e5bf444c30f4?q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    title: "Ses ve Gölge",
+    type: "Sanat Filmi",
+    year: "2023",
+    status: "Festival",
+    img: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1200&auto=format&fit=crop",
+  },
+];
+
+type Project = (typeof top)[number];
+
+function Card({ p }: { p: Project }) {
+  return (
+    <article className="group relative w-[320px] shrink-0 overflow-hidden rounded-3xl border border-border bg-card md:w-[380px]">
+      <div className="relative aspect-[4/5] overflow-hidden">
+        <img
+          src={p.img}
+          alt={`${p.title} — ${p.type}, ${p.year}`}
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          loading="lazy"
+        />
+        <span className="absolute left-4 top-4 rounded-full bg-background/90 px-3 py-1 text-xs font-medium backdrop-blur">
+          {p.status}
+        </span>
+      </div>
+      <div className="flex items-end justify-between gap-3 p-5">
+        <div>
+          <h3 className="font-display text-xl">{p.title}</h3>
+          <div className="text-xs text-muted-foreground">{p.type}</div>
+        </div>
+        <div className="font-display text-base text-muted-foreground">{p.year}</div>
+      </div>
+    </article>
+  );
+}
+
+function Row({ items, direction }: { items: Project[]; direction: "left" | "right" }) {
+  const row = [...items, ...items];
+  return (
+    <div className="relative overflow-hidden">
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-background to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-background to-transparent" />
+      <div
+        className="flex w-max gap-5 px-6"
+        style={{
+          animation: `marquee 60s linear infinite`,
+          animationDirection: direction === "right" ? "reverse" : "normal",
+        }}
+      >
+        {row.map((p, i) => (
+          <Card key={i} p={p} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export function Projects() {
+  return (
+    <section id="projeler" className="py-24 md:py-32">
+      <div className="mx-auto mb-12 max-w-7xl px-6">
+        <div className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+          <span className="h-2 w-2 rounded-full bg-primary" /> Filmografi
+        </div>
+        <h2 className="font-display text-4xl tracking-[-0.035em] md:text-6xl">
+          Öne çıkan{" "}
+          <span className="italic font-serif text-muted-foreground">projelerimiz.</span>
+        </h2>
+      </div>
+      <div className="flex flex-col gap-6">
+        <Row items={top} direction="left" />
+        <Row items={bottom} direction="right" />
+      </div>
+    </section>
+  );
+}
+
+
+Press.tsx:
+const items = [
+  {
+    outlet: "Variety Türkiye",
+    title: "Meridyen Film'in yeni festival çıkışı uluslararası ilgi topladı",
+    date: "Mart 2025",
+  },
+  {
+    outlet: "Cannes Marché",
+    title: "Türk yapım şirketi Avrupa ortak yapımına katıldı",
+    date: "Mayıs 2024",
+  },
+  {
+    outlet: "Sinema Dergisi",
+    title: "Yönetmen söyleşisi: Yeni nesil dijital prodüksiyon",
+    date: "Kasım 2024",
+  },
+  {
+    outlet: "Hollywood Reporter",
+    title: "Meridyen Film, dikey dizi formatında öne çıkıyor",
+    date: "Şubat 2025",
+  },
+];
+
+export function Press() {
+  return (
+    <section className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+      <div className="mb-12">
+        <div className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+          <span className="h-2 w-2 rounded-full bg-primary" /> Basında
+        </div>
+        <h2 className="font-display text-4xl tracking-[-0.035em] md:text-6xl">
+          Meridyen Film,{" "}
+          <span className="italic font-serif text-muted-foreground">basında.</span>
+        </h2>
+      </div>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+        {items.map((p) => (
+          <article
+            key={p.title}
+            className="flex flex-col justify-between rounded-3xl border border-border bg-card p-6 transition-all hover:-translate-y-1"
+          >
+            <div className="text-xs uppercase tracking-wider text-muted-foreground">
+              {p.outlet}
+            </div>
+            <h3 className="mt-6 font-display text-xl leading-snug md:text-2xl">
+              {p.title}
+            </h3>
+            <div className="mt-6 flex items-center justify-between text-xs text-muted-foreground">
+              <span>{p.date}</span>
+              <span className="grid h-9 w-9 place-items-center rounded-full border border-border">
+                ↗
+              </span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+
+Testimonials.tsx:
+const items = [
+  {
+    quote:
+      "Set disiplini ve prodüksiyon yönetimi konusunda sektörde denk geldiğim en profesyonel ekip. Pre-prodüksiyondaki titizlikleri sürpriz yaşatmadı.",
+    name: "Ahmet Yılmaz",
+    role: "Yönetmen",
+    initials: "AY",
+  },
+  {
+    quote:
+      "Post-prodüksiyon hızı ve renk derecelendirmedeki estetik anlayışları beklentilerimizin çok ötesindeydi. Markamızın vizyonunu ekrana tam yansıttılar.",
+    name: "Zeynep Kaya",
+    role: "Marka Müdürü",
+    initials: "ZK",
+  },
+  {
+    quote:
+      "Uluslararası festival standartlarında bir prodüksiyon kalitesini yerel bütçelerle nasıl elde edeceklerini çok iyi biliyorlar. Ortak yapımımız verimliydi.",
+    name: "Maria Carvalho",
+    role: "Prodüktör, Portekiz",
+    initials: "MC",
+  },
+  {
+    quote:
+      "Dikey dizi formatındaki yaratıcı süreç yönetimleri etkileyiciydi. Mobil tüketim dinamiklerini çok iyi kavramışlar; her sahneyi platforma göre optimize ettiler.",
+    name: "Elif Sarıoğlu",
+    role: "Dijital İçerik Direktörü",
+    initials: "ES",
+  },
+];
+
+export function Testimonials() {
+  return (
+    <section id="referanslar" className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+      <div className="mb-12">
+        <div className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+          <span className="h-2 w-2 rounded-full bg-primary" /> Başarı Hikayeleri
+        </div>
+        <h2 className="font-display text-4xl tracking-[-0.035em] md:text-6xl">
+          Birlikte çalıştığımız{" "}
+          <span className="italic font-serif text-muted-foreground">isimler.</span>
+        </h2>
+      </div>
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
+        {items.map((t) => (
+          <figure
+            key={t.name}
+            className="flex flex-col rounded-3xl border border-border bg-card p-6"
+          >
+            <div className="text-primary text-lg tracking-[0.2em]">★★★★★</div>
+            <blockquote className="mt-4 text-sm text-foreground/90">
+              {t.quote}
+            </blockquote>
+            <figcaption className="mt-6 flex items-center gap-3 border-t border-border pt-4">
+              <span className="grid h-10 w-10 place-items-center rounded-full bg-foreground font-display text-sm text-background">
+                {t.initials}
+              </span>
+              <div>
+                <div className="text-sm font-semibold">{t.name}</div>
+                <div className="text-xs text-muted-foreground">{t.role}</div>
+              </div>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+
+
+Blog.tsx:
+
+const posts = [
+  {
+    h: "Uluslararası Standartlarda Film, Dizi ve Dijital İçerik Üretimi",
+    s: "Meridyen Film Yapım; sinema filmleri, televizyon dizileri, reklam kampanyaları ve dijital platform projeleri geliştiren İstanbul merkezli bağımsız bir yapım şirketidir.",
+    img: "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    h: "Güçlü Hikâyeler, Kalıcı Yapımlar",
+    s: "Sinema, televizyon ve dijital platformlar için yaratıcı fikirleri profesyonel prodüksiyon süreçleriyle buluşturarak iz bırakacak içerikler üretiyoruz.",
+    img: "https://images.unsplash.com/photo-1500210600060-44b6bbf83f43?q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    h: "Sinema, Televizyon ve Marka İçerikleri İçin Profesyonel Yapım Çözümleri",
+    s: "2010'dan bu yana faaliyet gösteren Meridyen Film Yapım; bağımsız sinema filmleri, televizyon projeleri, reklam kampanyaları ve dijital medya içerikleri üretir.",
+    img: "https://images.unsplash.com/photo-1604975999044-188783d54fb3?q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    h: "Yaratıcı Fikirlerden Güçlü Yapımlara",
+    s: "Geliştirme aşamasından post-prodüksiyona kadar tüm süreçleri yöneten; film, dizi, reklam ve dijital medya projeleri üreten İstanbul merkezli bir yapım şirketi.",
+    img: "https://images.unsplash.com/photo-1518929458119-e5bf444c30f4?q=80&w=1200&auto=format&fit=crop",
+  },
+];
+
+export function Blog() {
+  return (
+    <section id="blog" className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+      <div className="mb-12">
+        <div className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+          <span className="h-2 w-2 rounded-full bg-primary" /> Bilgi Merkezi
+        </div>
+        <h2 className="font-display text-4xl tracking-[-0.035em] md:text-6xl">
+          Yapım dünyasından{" "}
+          <span className="italic font-serif text-muted-foreground">notlar.</span>
+        </h2>
+      </div>
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {posts.map((p, i) => (
+          <article
+            key={i}
+            className="group overflow-hidden rounded-3xl border border-border bg-card transition-colors hover:border-foreground/30"
+          >
+            <div className="relative aspect-[16/9] overflow-hidden">
+              <img
+                src={p.img}
+                alt={p.h}
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+            <div className="p-6 md:p-7">
+              <h3 className="font-display text-2xl leading-snug md:text-3xl">
+                {p.h}
+              </h3>
+              <p className="mt-3 text-sm text-muted-foreground md:text-base">
+                {p.s}
+              </p>
+              <a
+                href="#"
+                className="mt-5 inline-flex items-center gap-2 text-sm font-medium hover:text-primary"
+              >
+                Daha Fazlası <span aria-hidden>→</span>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+
+Faq.tsx:
+
+import { useState } from "react";
+
+const faqs = [
+  {
+    q: "Meridyen Film Yapım ortak yapım (co-production) projelerini kabul ediyor mu?",
+    a: "Evet, hem ulusal (Bakanlık, TRT vb.) hem de uluslararası (Eurimages vb.) fonlu ortak yapım projelerini, kreatif ve finansal standartlarımıza uygunluğu doğrultusunda değerlendiriyoruz.",
+  },
+  {
+    q: "Bir reklam veya marka içeriği üretimi ne kadar sürer?",
+    a: "Projenin kapsamına ve senaryo karmaşıklığına bağlı olarak; pre-prodüksiyondan post-prodüksiyona kadar takvim, çekim öncesinde şeffaf bir iş planıyla sunulur ve taahhüt edilen tarihte eksiksiz teslim edilir.",
+  },
+  {
+    q: "Uluslararası projelerde ve dış çekimlerde çalışıyor musunuz?",
+    a: "Evet, küresel standartlardaki teknik altyapımız, çok dilli ekibimiz ve uluslararası ortak yapım tecrübemizle hem Türkiye'deki yabancı yapımlara servis sağlıyor hem de yurt dışı projelerinde aktif rol alıyoruz.",
+  },
+  {
+    q: "Dikey dizi ve dijital içerik üretiminde hangi standartları uyguluyorsunuz?",
+    a: "Mobil tüketim alışkanlıklarına uygun olarak 9:16 formatında, yüksek tempolu kurgu mimarisine sahip ve yeni nesil dijital platformların güncel algoritmalarıyla tam uyumlu prodüksiyonlar üretiyoruz.",
+  },
+  {
+    q: "Şirketiniz bünyesinde harici projeler için sadece post-prodüksiyon hizmeti sunuluyor mu?",
+    a: "Evet, kendi projelerimiz dışındaki sinema, dizi ve reklam projelerine de kurgu, ses tasarımı, görsel efekt (VFX) ve sinematik renk derecelendirme (Color Grading) stüdyo hizmetleri sağlıyoruz.",
+  },
+  {
+    q: "Meridyen Film bünyesindeki projelere senaryo veya oyuncu başvurusu nasıl yapılır?",
+    a: "Senaryo, sinopsis veya oyuncu portfolyolarınızı web sitemizdeki 'Şimdi Başvur' formu üzerinden, KVKK metni onayıyla güvenle iletebilirsiniz. Şirketimiz başvurulardan hiçbir ad altında ücret talep etmez.",
+  },
+];
+
+export function Faq() {
+  const [open, setOpen] = useState<number | null>(0);
+  return (
+    <section id="sss" className="mx-auto max-w-5xl px-6 py-24 md:py-32">
+      <div className="mb-12 text-center">
+        <div className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+          <span className="h-2 w-2 rounded-full bg-primary" /> Sıkça Sorulan Sorular
+        </div>
+        <h2 className="font-display text-4xl tracking-[-0.035em] md:text-6xl">
+          Aklınızdaki{" "}
+          <span className="italic font-serif text-muted-foreground">her şey.</span>
+        </h2>
+      </div>
+      <div className="space-y-3">
+        {faqs.map((f, i) => {
+          const isOpen = open === i;
+          return (
+            <div
+              key={i}
+              className={`overflow-hidden rounded-2xl border bg-card transition-colors ${
+                isOpen ? "border-foreground/30" : "border-border"
+              }`}
+            >
+              <button
+                onClick={() => setOpen(isOpen ? null : i)}
+                className="flex w-full items-center gap-6 px-6 py-5 text-left md:px-8 md:py-6"
+              >
+                <span className="font-display text-2xl text-muted-foreground md:text-3xl">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="flex-1 font-display text-base md:text-2xl">
+                  {f.q}
+                </span>
+                <span
+                  className={`grid h-9 w-9 shrink-0 place-items-center rounded-full border border-border text-lg transition-transform ${
+                    isOpen ? "rotate-45 lime-pill border-transparent" : ""
+                  }`}
+                >
+                  +
+                </span>
+              </button>
+              <div
+                className={`grid transition-all duration-300 ${
+                  isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                }`}
+              >
+                <div className="overflow-hidden">
+                  <p className="px-6 pb-6 pl-[5.25rem] text-muted-foreground md:px-8 md:pb-8 md:pl-[6rem]">
+                    {f.a}
+                  </p>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+
+Contact.tsx:
+
+import { useState } from "react";
+import { z } from "zod";
+
+const cities = [
+  "İstanbul",
+  "Ankara",
+  "İzmir",
+  "Bursa",
+  "Antalya",
+  "Adana",
+  "Gaziantep",
+  "Konya",
+  "Diğer",
+];
+
+const schema = z.object({
+  name: z.string().trim().min(2, "Ad Soyad gerekli").max(100),
+  city: z.string().min(1, "Şehir seçiniz"),
+  phone: z
+    .string()
+    .trim()
+    .min(7, "Telefon numarası gerekli")
+    .max(20)
+    .regex(/^[0-9+()\-\s]+$/, "Geçersiz telefon"),
+  consent: z.literal(true, { errorMap: () => ({ message: "Onay gerekli" }) }),
+});
+
+export function Contact() {
+  const [status, setStatus] = useState<"idle" | "ok" | "err">("idle");
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    const parsed = schema.safeParse({
+      name: fd.get("name"),
+      city: fd.get("city"),
+      phone: fd.get("phone"),
+      consent: fd.get("consent") === "on",
+    });
+    if (!parsed.success) {
+      const errs: Record<string, string> = {};
+      parsed.error.issues.forEach((i) => {
+        errs[i.path[0] as string] = i.message;
+      });
+      setErrors(errs);
+      setStatus("err");
+      return;
+    }
+    setErrors({});
+    setStatus("ok");
+    e.currentTarget.reset();
+  }
+
+  return (
+    <section id="iletisim" className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+      <div className="mb-12">
+        <div className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+          <span className="h-2 w-2 rounded-full bg-primary" /> İletişim & Başvuru
+        </div>
+        <h2 className="font-display text-4xl tracking-[-0.035em] md:text-6xl">
+          Proje{" "}
+          <span className="italic font-serif text-muted-foreground">başlatın.</span>
+        </h2>
+      </div>
+
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+        {/* Left */}
+        <div className="flex flex-col gap-6">
+          <div className="overflow-hidden rounded-3xl border border-border bg-card">
+            <iframe
+              title="Meridyen Film konumu"
+              src="https://www.google.com/maps?q=Moda+Caddesi+Kad%C4%B1k%C3%B6y+%C4%B0stanbul&output=embed"
+              className="h-[320px] w-full"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="rounded-2xl border border-border bg-card p-5">
+              <div className="text-xs uppercase tracking-wider text-muted-foreground">
+                Adres
+              </div>
+              <div className="mt-2 text-sm">Moda Caddesi, Kadıköy / İstanbul</div>
+            </div>
+            <div className="rounded-2xl border border-border bg-card p-5">
+              <div className="text-xs uppercase tracking-wider text-muted-foreground">
+                Telefon
+              </div>
+              <div className="mt-2 text-sm">+90 212 000 00 00</div>
+            </div>
+            <div className="rounded-2xl border border-border bg-card p-5">
+              <div className="text-xs uppercase tracking-wider text-muted-foreground">
+                E-posta
+              </div>
+              <div className="mt-2 text-sm">info@meridyenfilm.com</div>
+            </div>
+            <a
+              href="https://wa.me/902120000000"
+              className="group flex items-center justify-between rounded-2xl lime-pill p-5 transition-transform hover:scale-[1.02]"
+            >
+              <div>
+                <div className="text-xs uppercase tracking-wider opacity-70">
+                  Hızlı İletişim
+                </div>
+                <div className="mt-2 text-sm font-semibold">WhatsApp Hattı</div>
+              </div>
+              <span className="grid h-9 w-9 place-items-center rounded-full bg-background text-foreground transition-transform group-hover:rotate-45">
+                ↗
+              </span>
+            </a>
+          </div>
+        </div>
+
+        {/* Form */}
+        <form
+          onSubmit={onSubmit}
+          className="flex flex-col gap-4 rounded-3xl border border-border bg-card p-6 md:p-8"
+        >
+          <div>
+            <label className="mb-2 block text-xs uppercase tracking-wider text-muted-foreground">
+              Ad Soyad
+            </label>
+            <input
+              name="name"
+              maxLength={100}
+              className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-foreground/40"
+            />
+            {errors.name && (
+              <p className="mt-1 text-xs text-destructive">{errors.name}</p>
+            )}
+          </div>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div>
+              <label className="mb-2 block text-xs uppercase tracking-wider text-muted-foreground">
+                Şehir
+              </label>
+              <select
+                name="city"
+                defaultValue=""
+                className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-foreground/40"
+              >
+                <option value="" disabled>
+                  Seçiniz
+                </option>
+                {cities.map((c) => (
+                  <option key={c} value={c}>
+                    {c}
+                  </option>
+                ))}
+              </select>
+              {errors.city && (
+                <p className="mt-1 text-xs text-destructive">{errors.city}</p>
+              )}
+            </div>
+            <div>
+              <label className="mb-2 block text-xs uppercase tracking-wider text-muted-foreground">
+                Telefon
+              </label>
+              <input
+                name="phone"
+                inputMode="tel"
+                maxLength={20}
+                placeholder="+90 5xx xxx xx xx"
+                className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-foreground/40"
+              />
+              {errors.phone && (
+                <p className="mt-1 text-xs text-destructive">{errors.phone}</p>
+              )}
+            </div>
+          </div>
+          <div>
+            <label className="mb-2 block text-xs uppercase tracking-wider text-muted-foreground">
+              Fotoğraf (Maks. 20MB)
+            </label>
+            <input
+              type="file"
+              name="photo"
+              accept="image/*"
+              className="w-full rounded-xl border border-dashed border-border bg-background px-4 py-3 text-sm file:mr-3 file:rounded-full file:border-0 file:bg-foreground file:px-3 file:py-1.5 file:text-xs file:text-background"
+            />
+          </div>
+          <label className="flex items-start gap-3 rounded-xl border border-border bg-background p-4 text-xs text-muted-foreground">
+            <input
+              type="checkbox"
+              name="consent"
+              className="mt-0.5 h-4 w-4 accent-primary"
+            />
+            <span>
+              KVKK Aydınlatma Metni ve Veri İşleme Rıza Beyanını okudum, onaylıyorum.
+            </span>
+          </label>
+          {errors.consent && (
+            <p className="-mt-2 text-xs text-destructive">{errors.consent}</p>
+          )}
+          <button
+            type="submit"
+            className="group mt-2 inline-flex items-center justify-center gap-3 rounded-full lime-pill px-6 py-3.5 text-sm font-semibold shadow-[0_10px_40px_-10px_oklch(0.92_0.22_130/0.7)] transition-transform hover:scale-[1.02]"
+          >
+            Gönder
+            <span className="grid h-7 w-7 place-items-center rounded-full bg-background text-foreground transition-transform group-hover:rotate-45">
+              ↗
+            </span>
+          </button>
+          {status === "ok" && (
+            <p className="text-sm text-foreground/80">
+              Teşekkürler — başvurunuz alındı. En kısa sürede dönüş yapacağız.
+            </p>
+          )}
+        </form>
+      </div>
+    </section>
+  );
+}
+
+
+Footer.tsx:
+
+const recentPosts = [
+  "Uluslararası Standartlarda Film, Dizi ve Dijital İçerik Üretimi",
+  "Güçlü Hikâyeler, Kalıcı Yapımlar",
+  "Profesyonel Yapım Çözümleri",
+];
+
+const social = [
+  "Instagram",
+  "YouTube",
+  "Vimeo",
+  "LinkedIn",
+  "IMDb",
+  "Box Office Türkiye",
+  "SinemaTürk",
+  "Beyazperde",
+];
+
+export function Footer() {
+  return (
+    <footer className="border-t border-border bg-foreground text-background">
+      <div className="mx-auto max-w-7xl px-6 py-20">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+          {/* Col 1 */}
+          <div>
+            <div className="flex items-center gap-2.5">
+              <svg width="32" height="32" viewBox="0 0 40 40" aria-hidden>
+                <path
+                  d="M4 32 V8 L20 24 L36 8 V32"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeLinejoin="round"
+                  strokeLinecap="round"
+                />
+              </svg>
+              <span className="font-display text-lg">MERİDYEN FİLM</span>
+            </div>
+            <p className="mt-5 text-sm opacity-80">
+              Meridyen Film Yapım, İstanbul merkezli, 16 yıllık deneyimle sinema,
+              dizi, reklam ve yeni nesil medya üreten bağımsız bir yapım kuruluşudur.
+            </p>
+          </div>
+
+          {/* Col 2 */}
+          <div>
+            <div className="mb-4 text-xs uppercase tracking-wider opacity-60">
+              Gezinti
+            </div>
+            <ul className="space-y-2 text-sm">
+              {[
+                ["Ana Sayfa", "#top"],
+                ["Hakkımızda", "#hakkimizda"],
+                ["Neler Yapıyoruz", "#hizmetler"],
+                ["Projelerimiz", "#projeler"],
+                ["Blog", "#blog"],
+                ["İletişim", "#iletisim"],
+              ].map(([l, h]) => (
+                <li key={l}>
+                  <a href={h} className="opacity-90 hover:text-primary">
+                    {l}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Col 3 */}
+          <div>
+            <div className="mb-4 text-xs uppercase tracking-wider opacity-60">
+              Bilgi Merkezi
+            </div>
+            <ul className="space-y-3 text-sm">
+              {recentPosts.map((p) => (
+                <li key={p}>
+                  <a href="#blog" className="opacity-90 hover:text-primary">
+                    {p}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Col 4 */}
+          <div>
+            <div className="mb-4 text-xs uppercase tracking-wider opacity-60">
+              Yasal & Sosyal
+            </div>
+            <ul className="mb-4 space-y-2 text-sm">
+              {[
+                "KVKK Aydınlatma Metni",
+                "Gizlilik Politikası",
+                "Çerez Politikası",
+                "Kullanım Şartları",
+                "Site Haritası",
+              ].map((l) => (
+                <li key={l}>
+                  <a href="#" className="opacity-90 hover:text-primary">
+                    {l}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs opacity-70">
+              {social.map((s, i) => (
+                <span key={s} className="inline-flex items-center gap-3">
+                  <a href="#" className="hover:text-primary">
+                    {s}
+                  </a>
+                  {i < social.length - 1 && <span>·</span>}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-16 border-t border-background/15 pt-6 text-xs opacity-70">
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <span>Ticaret Sicil No: XXXXXX</span>
+            <span>MERSİS No: XXXXXXXXXXXXXXXX</span>
+            <span>Vergi Dairesi: Kadıköy</span>
+            <span>V.N: XXXXXXXXXX</span>
+          </div>
+          <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
+            <div>© 2010 Meridyen Film Yapım. Tüm hakları saklıdır. İstanbul.</div>
+            <a href="#top" className="hover:text-primary">
+              Yukarı Dön ↑
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+
+
+
+
+src altındaki hooks klasöründe:
+use-mobile.tsx:
+import * as React from "react";
+
+const MOBILE_BREAKPOINT = 768;
+
+export function useIsMobile() {
+  const [isMobile, setIsMobile] = React.useState<boolean | undefined>(undefined);
+
+  React.useEffect(() => {
+    const mql = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`);
+    const onChange = () => {
+      setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
+    };
+    mql.addEventListener("change", onChange);
+    setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
+    return () => mql.removeEventListener("change", onChange);
+  }, []);
+
+  return !!isMobile;
+}
+
+
+
+bu işine yarar mı bilmiyorum dediğim gibi aslında bu bir online kodlayıcıdan aldığım bir kod. bu nedenle bu kodu da veriyorum localde gerek yoksa kullanma
+
+src altında routes klasöründe :
+__root.tsx:
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import {
+  Outlet,
+  Link,
+  createRootRouteWithContext,
+  useRouter,
+  HeadContent,
+  Scripts,
+} from "@tanstack/react-router";
+import { useEffect, type ReactNode } from "react";
+
+import appCss from "../styles.css?url";
+import { reportLovableError } from "../lib/lovable-error-reporting";
+
+function NotFoundComponent() {
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+      <div className="max-w-md text-center">
+        <h1 className="text-7xl font-bold text-foreground">404</h1>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
+        <p className="mt-2 text-sm text-muted-foreground">
+          The page you're looking for doesn't exist or has been moved.
+        </p>
+        <div className="mt-6">
+          <Link
+            to="/"
+            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            Go home
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+  console.error(error);
+  const router = useRouter();
+  useEffect(() => {
+    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+  }, [error]);
+
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+      <div className="max-w-md text-center">
+        <h1 className="text-xl font-semibold tracking-tight text-foreground">
+          This page didn't load
+        </h1>
+        <p className="mt-2 text-sm text-muted-foreground">
+          Something went wrong on our end. You can try refreshing or head back home.
+        </p>
+        <div className="mt-6 flex flex-wrap justify-center gap-2">
+          <button
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
+            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            Try again
+          </button>
+          <a
+            href="/"
+            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+          >
+            Go home
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  head: () => ({
+    meta: [
+      { charSet: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { title: "Lovable App" },
+      { name: "description", content: "Lovable Generated Project" },
+      { name: "author", content: "Lovable" },
+      { property: "og:title", content: "Lovable App" },
+      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
+      { name: "twitter:site", content: "@Lovable" },
+    ],
+    links: [
+      {
+        rel: "stylesheet",
+        href: appCss,
+      },
+    ],
+  }),
+  shellComponent: RootShell,
+  component: RootComponent,
+  notFoundComponent: NotFoundComponent,
+  errorComponent: ErrorComponent,
+});
+
+function RootShell({ children }: { children: ReactNode }) {
+  return (
+    <html lang="en">
+      <head>
+        <HeadContent />
+      </head>
+      <body>
+        {children}
+        <Scripts />
+      </body>
+    </html>
+  );
+}
+
+function RootComponent() {
+  const { queryClient } = Route.useRouteContext();
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+      <Outlet />
+    </QueryClientProvider>
+  );
+}
+
+
+index.tsx:
+import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/site/Navbar";
+import { Hero } from "@/components/site/Hero";
+import { TrustBand } from "@/components/site/TrustBand";
+import { Counters } from "@/components/site/Counters";
+import { About } from "@/components/site/About";
+import { WhyUs } from "@/components/site/WhyUs";
+import { Services } from "@/components/site/Services";
+import { Process } from "@/components/site/Process";
+import { Projects } from "@/components/site/Projects";
+import { Press } from "@/components/site/Press";
+import { Testimonials } from "@/components/site/Testimonials";
+import { Blog } from "@/components/site/Blog";
+import { Faq } from "@/components/site/Faq";
+import { Contact } from "@/components/site/Contact";
+import { Footer } from "@/components/site/Footer";
+
+export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      {
+        title:
+          "Meridyen Film Yapım | İstanbul Merkezli Sinema ve Dijital Film Yapım Şirketi",
+      },
+      {
+        name: "description",
+        content:
+          "Meridyen Film Yapım — İstanbul merkezli sinema, dizi, reklam ve dijital prodüksiyon şirketi. Uluslararası standartlarda film, dizi ve dijital içerik üretiyoruz.",
+      },
+      {
+        property: "og:title",
+        content: "Meridyen Film Yapım | Sinema ve Dijital Film Yapım Şirketi",
+      },
+      {
+        property: "og:description",
+        content:
+          "İstanbul merkezli bağımsız yapım şirketi: uzun metraj sinema, televizyon dizileri, reklam ve dijital içerik prodüksiyonu.",
+      },
+    ],
+    links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800;900&display=swap",
+      },
+    ],
+  }),
+  component: Index,
+});
+
+function Index() {
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <Navbar />
+      <Hero />
+      <TrustBand />
+      <Counters />
+      <About />
+      <WhyUs />
+      <Services />
+      <Process />
+      <Projects />
+      <Press />
+      <Testimonials />
+      <Blog />
+      <Faq />
+      <Contact />
+      <Footer />
+    </div>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

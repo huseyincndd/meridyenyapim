@@ -1,14 +1,37 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f7f7;
+  --background: #ffffff;
   --foreground: #1a1a1a;
   --accent-lime: #a2ff32;
+  
+  --card: #f7f7f7;
+  --border: #e5e5e5;
+  --muted-foreground: #737373;
+  --primary: var(--accent-lime);
+  --secondary: #e5e5e5;
+  --destructive: #ef4444;
+}
+
+.dark {
+  --background: #111111;
+  --foreground: #ffffff;
+  --card: #1a1a1a;
+  --border: #2a2a2a;
+  --muted-foreground: #a3a3a3;
+  --primary: var(--accent-lime);
+  --secondary: #2a2a2a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-destructive: var(--destructive);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -26,6 +49,21 @@ body {
   }
   .animate-marquee {
     animation: marquee 90s linear infinite;
+  }
+  
+  .bg-waves {
+    background-color: transparent;
+  }
+  .bg-grid {
+    background-color: transparent;
+  }
+  .lime-pill {
+    background-color: var(--accent-lime);
+    color: var(--foreground);
+  }
+  .ink-pill {
+    background-color: var(--foreground);
+    color: var(--background);
   }
 }
 

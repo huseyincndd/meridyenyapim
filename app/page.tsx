@@ -1,45 +1,71 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import { Marquee } from "./components/Marquee";
-import { FeaturedSection } from "./components/FeaturedSection";
-import { ProjectCards, ProjectCardsRow2 } from "./components/ProjectCards";
-import { ToolsSection } from "./components/ToolsSection";
-import { ServicesMarquee } from "./components/ServicesMarquee";
-import { HowItWorksSection } from "./components/HowItWorksSection";
-import { StatsAndTestimonialsSection } from "./components/StatsAndTestimonialsSection";
-import { TestimonialsMarquee } from "./components/TestimonialsMarquee";
-import { FAQSection } from "./components/FAQSection";
-import { ContactSection } from "./components/ContactSection";
-import { StatsStripMarquee } from "./components/StatsStripMarquee";
-import { FooterSection } from "./components/FooterSection";
+import { Navbar } from "@/components/site/Navbar";
+import { Hero } from "@/components/site/Hero";
+import { TrustBand } from "@/components/site/TrustBand";
+import { Counters } from "@/components/site/Counters";
+import { About } from "@/components/site/About";
+import { WhyUs } from "@/components/site/WhyUs";
+import { Services } from "@/components/site/Services";
+import { Process } from "@/components/site/Process";
+import { Projects } from "@/components/site/Projects";
+import { Press } from "@/components/site/Press";
+import { Testimonials } from "@/components/site/Testimonials";
+import { Blog } from "@/components/site/Blog";
+import { Faq } from "@/components/site/Faq";
+import { Contact } from "@/components/site/Contact";
+import { Footer } from "@/components/site/Footer";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen font-sans bg-[#fafafa] text-[#1a1a1a] overflow-x-hidden">
-      <div
-        className="pointer-events-none fixed inset-0 bg-[#F7F7F7] bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage:
-            "url(https://framerusercontent.com/images/LPWGL7rFF0pjhd6IZOMCT5H39XY.jpg)",
-        }}
-        aria-hidden
-      />
-      <div className="relative flex min-h-screen flex-col">
-        <Header />
+    <div className="flex min-h-screen flex-col overflow-x-hidden">
+      <div className="bg-background text-foreground">
+        <Navbar />
         <Hero />
-        <Marquee />
-        <FeaturedSection />
-        <ProjectCards />
-        <ProjectCardsRow2 />
-        <ToolsSection />
-        <ServicesMarquee />
-        <HowItWorksSection />
-        <StatsAndTestimonialsSection />
-        <TestimonialsMarquee />
-        <FAQSection />
-        <ContactSection />
-        <StatsStripMarquee />
-        <FooterSection />
+      </div>
+      
+      <div className="dark bg-background text-foreground">
+        <TrustBand />
+        <Counters />
+      </div>
+      
+      <div className="bg-background text-foreground">
+        <About />
+      </div>
+      
+      <div className="dark bg-background text-foreground">
+        <WhyUs />
+      </div>
+      
+      <div className="bg-background text-foreground">
+        <Services />
+      </div>
+      
+      <div className="dark bg-background text-foreground">
+        <Process />
+      </div>
+      
+      <div className="bg-background text-foreground">
+        <Projects />
+      </div>
+      
+      <div className="dark bg-background text-foreground">
+        <Press />
+      </div>
+      
+      <div className="bg-background text-foreground">
+        <Testimonials />
+      </div>
+      
+      <div className="dark bg-background text-foreground">
+        <Blog />
+      </div>
+      
+      <div className="bg-background text-foreground border-t border-border">
+        <Faq />
+        <Contact />
+      </div>
+      
+      <div className="dark bg-background text-foreground">
+        <Footer />
       </div>
     </div>
   );
