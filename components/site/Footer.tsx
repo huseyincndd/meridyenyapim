@@ -1,23 +1,28 @@
-const recentPosts = [
-  "Uluslararası Standartlarda Film, Dizi ve Dijital İçerik Üretimi",
-  "Güçlü Hikâyeler, Kalıcı Yapımlar",
-  "Profesyonel Yapım Çözümleri",
-];
-
-const social = [
-  "Instagram",
-  "YouTube",
-  "Vimeo",
-  "LinkedIn",
-  "IMDb",
-  "Box Office Türkiye",
-  "SinemaTürk",
-  "Beyazperde",
-];
-
 export function Footer() {
+  const social = [
+    { name: "Instagram", url: "https://www.instagram.com/meridyenfilm/" },
+    { name: "YouTube", url: "https://www.youtube.com/@meridyenfilmyapim/" },
+    { name: "Vimeo", url: "https://vimeo.com/" },
+    { name: "LinkedIn", url: "https://tr.linkedin.com/" },
+    { name: "IMDb", url: "https://www.imdb.com/" },
+    { name: "Box Office Türkiye", url: "https://boxofficeturkiye.com/" },
+    { name: "Beyazperde", url: "https://www.beyazperde.com/" },
+    { name: "SinemaTürk", url: "https://www.sinematurk.com/" },
+  ];
+
+  const legalLinks = [
+    { name: "Aydınlatma Metni", path: "/yasal/aydinlatma-metni" },
+    { name: "Açık Rıza Onayı", path: "/yasal/acik-riza-onayi" },
+    { name: "Kvkk Politikası", path: "/yasal/kvkk-politikasi" },
+    { name: "Bgys Politikası", path: "/yasal/bgys-politikasi" },
+    { name: "Kvkk Başvuru Formu", path: "/yasal/kvkk-basvuru-formu" },
+    { name: "Gizlilik Politikası", path: "/yasal/gizlilik-politikasi" },
+    { name: "Çerez Politikası", path: "/yasal/cerez-politikasi" },
+    { name: "Site Haritası", path: "/yasal/site-haritasi" }
+  ];
+
   return (
-    <footer className="border-t border-border bg-foreground text-background">
+    <footer className="border-t border-border bg-foreground text-background relative z-50">
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Col 1 */}
@@ -36,8 +41,7 @@ export function Footer() {
               <span className="font-display text-lg">MERİDYEN FİLM</span>
             </div>
             <p className="mt-5 text-sm opacity-80">
-              Meridyen Film Yapım, İstanbul merkezli, 16 yıllık deneyimle sinema,
-              dizi, reklam ve yeni nesil medya üreten bağımsız bir yapım kuruluşudur.
+              Hikâyeleri Görüntüye Dönüştüren Yapım Şirketi.
             </p>
           </div>
 
@@ -48,12 +52,12 @@ export function Footer() {
             </div>
             <ul className="space-y-2 text-sm">
               {[
-                ["Ana Sayfa", "#top"],
-                ["Hakkımızda", "#hakkimizda"],
-                ["Neler Yapıyoruz", "#hizmetler"],
-                ["Projelerimiz", "#projeler"],
-                ["Blog", "#blog"],
-                ["İletişim", "#iletisim"],
+                ["Ana Sayfa", "/"],
+                ["Hakkımızda", "/hakkimizda"],
+                ["Hizmetler", "/hizmetler"],
+                ["Projeler", "/projeler"],
+                ["Blog", "/blog"],
+                ["İletişim", "/iletisim"],
               ].map(([l, h]) => (
                 <li key={l}>
                   <a href={h} className="opacity-90 hover:text-primary">
@@ -67,13 +71,13 @@ export function Footer() {
           {/* Col 3 */}
           <div>
             <div className="mb-4 text-xs uppercase tracking-wider opacity-60">
-              Bilgi Merkezi
+              Sosyal Medya
             </div>
-            <ul className="space-y-3 text-sm">
-              {recentPosts.map((p) => (
-                <li key={p}>
-                  <a href="#blog" className="opacity-90 hover:text-primary">
-                    {p}
+            <ul className="space-y-2 text-sm">
+              {social.map((s) => (
+                <li key={s.name}>
+                  <a href={s.url} target="_blank" rel="noopener noreferrer" className="opacity-90 hover:text-primary">
+                    {s.name}
                   </a>
                 </li>
               ))}
@@ -83,45 +87,23 @@ export function Footer() {
           {/* Col 4 */}
           <div>
             <div className="mb-4 text-xs uppercase tracking-wider opacity-60">
-              Yasal & Sosyal
+              Yasal Belgeler
             </div>
             <ul className="mb-4 space-y-2 text-sm">
-              {[
-                "KVKK Aydınlatma Metni",
-                "Gizlilik Politikası",
-                "Çerez Politikası",
-                "Kullanım Şartları",
-                "Site Haritası",
-              ].map((l) => (
-                <li key={l}>
-                  <a href="#" className="opacity-90 hover:text-primary">
-                    {l}
+              {legalLinks.map((l) => (
+                <li key={l.name}>
+                  <a href={l.path} className="opacity-90 hover:text-primary transition-colors">
+                    {l.name}
                   </a>
                 </li>
               ))}
             </ul>
-            <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs opacity-70">
-              {social.map((s, i) => (
-                <span key={s} className="inline-flex items-center gap-3">
-                  <a href="#" className="hover:text-primary">
-                    {s}
-                  </a>
-                  {i < social.length - 1 && <span>·</span>}
-                </span>
-              ))}
-            </div>
           </div>
         </div>
 
         <div className="mt-16 border-t border-background/15 pt-6 text-xs opacity-70">
-          <div className="flex flex-wrap gap-x-6 gap-y-2">
-            <span>Ticaret Sicil No: XXXXXX</span>
-            <span>MERSİS No: XXXXXXXXXXXXXXXX</span>
-            <span>Vergi Dairesi: Kadıköy</span>
-            <span>V.N: XXXXXXXXXX</span>
-          </div>
-          <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
-            <div>© 2010 Meridyen Film Yapım. Tüm hakları saklıdır. İstanbul.</div>
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>© 2010 Meridyen Film. Tüm hakları saklıdır. İstanbul.</div>
             <a href="#top" className="hover:text-primary">
               Yukarı Dön ↑
             </a>

@@ -3,59 +3,61 @@ const services = [
     n: "01",
     title: "Sinema Filmleri",
     tag: "Uzun Metraj Yapım Şirketi",
-    desc: "Ulusal ve uluslararası vizyon ile festival hedefli uzun metraj yapımlar.",
+    desc: "Ulusal ve uluslararası vizyon hedefiyle geliştirilen uzun metraj film projelerinin yapım süreçlerini yönetiyoruz.",
     img: "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1400&auto=format&fit=crop",
   },
   {
     n: "02",
     title: "Dizi Yapımları",
     tag: "Dijital Platform Dizi Prodüksiyonu",
-    desc: "Televizyon kanalları ve global dijital platformlar için dizi projeleri.",
+    desc: "Televizyon kanalları ve dijital yayın platformları için dizi projeleri geliştiriyor ve üretiyoruz.",
     img: "https://images.unsplash.com/photo-1518929458119-e5bf444c30f4?q=80&w=1400&auto=format&fit=crop",
   },
   {
     n: "03",
     title: "Reklam Filmleri",
     tag: "Kurumsal Reklam Filmi Çekimi",
-    desc: "Marka kimliğini ve prestijini güçlendiren sinematik reklam kampanyaları.",
+    desc: "Markaların hikâyelerini yaratıcı ve etkili prodüksiyon süreçleriyle ekrana taşıyoruz.",
     img: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1400&auto=format&fit=crop",
   },
   {
     n: "04",
     title: "Dijital İçerik Üretimi",
-    tag: "Dikey Dizi Formatı",
-    desc: "Mobil ve web platformları için optimize edilmiş dinamik formatlar ve dikey yapımlar.",
+    tag: "Dikey Dizi ve Dijital İçerik Formatları",
+    desc: "Dijital platformlar, sosyal medya ve mobil ekranlar için yeni nesil içerikler üretiyoruz.",
     img: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1400&auto=format&fit=crop",
   },
   {
     n: "05",
     title: "Post-Prodüksiyon",
     tag: "Post-Prodüksiyon Stüdyosu",
-    desc: "Stüdyomuzda montaj, ses miksajı ve sinematik renk derecelendirme (Color Grading).",
+    desc: "Kurgu, ses tasarımı, renk düzenleme ve teslim süreçlerini profesyonel stüdyo altyapımızla yönetiyoruz.",
     img: "https://images.unsplash.com/photo-1601506521937-0121a7fc2a6b?q=80&w=1400&auto=format&fit=crop",
   },
 ];
 
+import { FadeIn } from "./FadeIn";
+
 export function Services() {
   return (
     <section id="hizmetler" className="mx-auto max-w-7xl px-6 py-24 md:py-32">
-      <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
+      <FadeIn className="mb-12 flex flex-wrap items-end justify-between gap-6">
         <div>
           <div className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
             <span className="h-2 w-2 rounded-full bg-primary" /> Hizmetlerimiz
           </div>
-          <h2 className="font-display text-4xl tracking-[-0.035em] md:text-6xl">
-            Uzmanlık{" "}
-            <span className="italic font-serif text-muted-foreground">alanlarımız.</span>
+          <h2 className="font-display text-5xl tracking-[-0.035em] md:text-6xl">
+            Neler{" "}
+            <span className="italic font-serif text-muted-foreground">yapıyoruz?</span>
           </h2>
         </div>
         <a
-          href="#iletisim"
+          href="/iletisim"
           className="rounded-full border border-border bg-card px-5 py-2.5 text-sm hover:bg-secondary"
         >
           Daha Fazlası →
         </a>
-      </div>
+      </FadeIn>
 
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {services.map((s) => (

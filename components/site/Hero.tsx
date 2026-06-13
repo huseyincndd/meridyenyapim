@@ -1,3 +1,5 @@
+import { FadeIn } from "./FadeIn";
+
 export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden bg-waves">
@@ -27,41 +29,44 @@ export function Hero() {
 
         {/* Headline */}
         <div className="flex flex-col gap-10">
-          <div className="inline-flex w-fit items-center gap-2 text-sm">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-70" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-primary" />
-            </span>
-            <span className="text-foreground/80">
-              Yeni proje başvuruları açık
-            </span>
-          </div>
+          <FadeIn delay={100}>
+            <div className="inline-flex w-fit items-center gap-2 text-sm">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-70" />
+                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-primary" />
+              </span>
+              <span className="text-foreground/80">
+                Yeni proje başvuruları açık
+              </span>
+            </div>
+          </FadeIn>
 
-          <h1 className="font-display text-[40px] leading-[1.02] tracking-[-0.04em] text-foreground md:text-6xl lg:text-[76px]">
-            <span className="inline-flex items-center rounded-full bg-card px-5 py-1 align-middle text-[0.9em] shadow-sm ring-1 ring-border">
-              Meridyen Film
-            </span>{" "}
-            —{" "}
-            <span className="inline-flex items-center rounded-full ink-pill px-5 py-1 align-middle text-[0.9em]">
-              Uluslararası
-            </span>{" "}
-            standartlarda film, dizi ve{" "}
-            <span className="inline-flex items-center rounded-full bg-primary text-foreground px-5 py-1 align-middle text-[0.9em] shadow-sm">
-              dijital
-            </span>{" "}
-            yapım üretimi.
-          </h1>
+          <FadeIn delay={200}>
+            <h1 className="font-display text-5xl sm:text-[56px] leading-[1.02] tracking-[-0.04em] text-foreground md:text-6xl lg:text-[76px]">
+              <span className="inline-flex items-center rounded-full bg-card px-5 py-1 align-middle text-[0.9em] shadow-sm ring-1 ring-border">
+                Meridyen Film Yapım
+              </span>{" "}
+              | İstanbul Merkezli{" "}
+              <span className="inline-flex items-center rounded-full ink-pill px-5 py-1 align-middle text-[0.9em]">
+                Dizi
+              </span>
+              , Sinema ve{" "}
+              <span className="inline-flex items-center rounded-full bg-primary text-foreground px-5 py-1 align-middle text-[0.9em] shadow-sm">
+                Reklam
+              </span>{" "}
+              Film Yapım Şirketi
+            </h1>
+          </FadeIn>
 
-          <p className="max-w-2xl text-base text-muted-foreground md:text-lg">
-            Meridyen Film Yapım; köklü sektör deneyimiyle uzun metraj sinema
-            filmleri, televizyon dizileri, uluslararası ortak yapımlar, reklam
-            filmleri ve yeni nesil dikey dizi formatları geliştiren İstanbul
-            merkezli bağımsız bir yapım şirketidir.
-          </p>
+          <FadeIn delay={300}>
+            <p className="max-w-2xl text-base text-muted-foreground md:text-lg">
+              Meridyen Film Yapım; 2010 yılından bu yana film yapımı, dizi prodüksiyonu, reklam filmi üretimi, dijital içerik geliştirme ve uluslararası ortak yapım alanlarında faaliyet gösteren İstanbul merkezli bağımsız bir film yapım şirketidir.
+            </p>
+          </FadeIn>
 
           <div className="flex flex-wrap items-center gap-4">
             <a
-              href="#iletisim"
+              href="/iletisim"
               className="group inline-flex items-center gap-3 rounded-full lime-pill px-6 py-3.5 text-sm font-semibold shadow-[0_10px_40px_-10px_oklch(0.92_0.22_130/0.7)] transition-transform hover:scale-[1.03]"
             >
               Proje Başlat
@@ -70,7 +75,7 @@ export function Hero() {
               </span>
             </a>
             <a
-              href="#projeler"
+              href="/projeler"
               className="rounded-full border border-border bg-card px-6 py-3.5 text-sm font-medium transition-colors hover:bg-secondary"
             >
               Projelerimiz

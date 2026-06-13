@@ -2,32 +2,32 @@ const cards = [
   {
     n: "01",
     title: "Yaratıcı Geliştirme",
-    desc: "Fikirden senaryoya, her aşamada derinlikli dramaturji ve senaryo doktorluğu desteği.",
+    desc: "Fikir aşamasından senaryo geliştirmeye kadar projelerin yaratıcı temelini deneyimli ekiplerimizle oluşturuyoruz.",
   },
   {
     n: "02",
     title: "Güvenilir Prodüksiyon",
-    desc: "Bütçe planlamasından set yönetimine kadar uçtan uca, şeffaf ve profesyonel süreç yönetimi.",
+    desc: "Planlama, bütçe yönetimi ve çekim süreçlerini şeffaf, kontrollü ve profesyonel bir yaklaşımla yürütüyoruz.",
   },
   {
     n: "03",
-    title: "Şirket İçi Post-Prodüksiyon",
-    desc: "Kurgu, VFX, ses tasarımı ve sinematik renk derecelendirmenin tek çatı altında çözülmesi.",
+    title: "Kurumsal Şeffaflık",
+    desc: "Net bütçelendirme, açık iletişim ve sürdürülebilir iş ortaklıklarıyla güvene dayalı çalışma modeli benimsiyoruz.",
   },
   {
     n: "04",
     title: "Uluslararası Standartlar",
-    desc: "Global dijital platformların ve festivallerin teknik ve hukuki mevzuatlarına tam uyumluluk.",
+    desc: "Projelerimizi güncel yayın, teknik ve prodüksiyon standartlarına uygun şekilde geliştiriyoruz.",
   },
   {
     n: "05",
     title: "Teknolojik Altyapı",
-    desc: "4K/8K sinematik kamera sistemleri ve yeni nesil dijital içerik formatlarına uygun altyapı.",
+    desc: "Yeni nesil kamera sistemleri, profesyonel ekipman altyapısı ve dijital üretim teknolojileriyle çalışıyoruz.",
   },
   {
     n: "06",
     title: "Tek Noktadan Çözüm",
-    desc: "Fikirden nihai dağıtıma kadar tüm süreçlerin tek bir muhatap üzerinden eksiksiz yönetilmesi.",
+    desc: "Yaratıcı geliştirmeden teslim aşamasına kadar tüm süreçleri tek bir koordinasyon yapısı altında yönetiyoruz.",
   },
 ];
 
@@ -37,11 +37,11 @@ export function WhyUs() {
       <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
         <div>
           <div className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-            <span className="h-2 w-2 rounded-full bg-primary" /> Neden Meridyen?
+            <span className="h-2 w-2 rounded-full bg-primary" /> Neden Meridyen Film Yapım?
           </div>
           <h2 className="font-display text-4xl tracking-[-0.035em] md:text-6xl">
-            Fark yaratan{" "}
-            <span className="italic font-serif text-muted-foreground">değerler.</span>
+            Fark yaratan değerler ve{" "}
+            <span className="italic font-serif text-muted-foreground">sürdürülebilir yapım kültürü.</span>
           </h2>
         </div>
       </div>
@@ -66,6 +66,31 @@ export function WhyUs() {
             </div>
           </article>
         ))}
+      </div>
+
+      <div className="mt-16 flex justify-center">
+        <div className="inline-flex flex-wrap items-center justify-center gap-x-6 gap-y-4 rounded-3xl md:rounded-full border border-border/80 bg-card/60 px-6 py-4 shadow-sm backdrop-blur-md md:px-10">
+          <div className="flex items-center gap-3">
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary/20">
+              <span className="h-2 w-2 rounded-full bg-primary"></span>
+            </span>
+            <span className="font-medium text-sm md:text-base tracking-wide">16+ Yıllık Deneyim</span>
+          </div>
+          <div className="hidden h-5 w-px bg-border md:block" />
+          <div className="flex items-center gap-3">
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary/20">
+              <span className="h-2 w-2 rounded-full bg-primary"></span>
+            </span>
+            <span className="font-medium text-sm md:text-base tracking-wide">100+ Proje</span>
+          </div>
+          <div className="hidden h-5 w-px bg-border md:block" />
+          <div className="flex items-center gap-3">
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary/20">
+              <span className="h-2 w-2 rounded-full bg-primary"></span>
+            </span>
+            <span className="font-medium text-sm md:text-base tracking-wide">Uçtan Uca Yapım Yönetimi</span>
+          </div>
+        </div>
       </div>
     </section>
   );

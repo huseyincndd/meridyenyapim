@@ -78,8 +78,8 @@ type Project = (typeof top)[number];
 
 function Card({ p }: { p: Project }) {
   return (
-    <article className="group relative w-[320px] shrink-0 overflow-hidden rounded-3xl border border-border bg-card md:w-[380px]">
-      <div className="relative aspect-[4/5] overflow-hidden">
+    <article className="group relative w-[320px] shrink-0 overflow-hidden rounded-3xl border border-border bg-card md:w-[460px]">
+      <div className="relative aspect-video overflow-hidden">
         <img
           src={p.img}
           alt={`${p.title} — ${p.type}, ${p.year}`}

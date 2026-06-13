@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Meridyen Film Yapım",
+  title: "Meridyen Film",
   description:
-    "Meridyen Film Yapım; köklü sektör deneyimiyle sinema filmleri, televizyon dizileri ve reklam filmleri üreten İstanbul merkezli yapım şirketidir.",
+    "Meridyen Film; köklü sektör deneyimiyle sinema filmleri, televizyon dizileri ve reklam filmleri üreten İstanbul merkezli yapım şirketidir.",
 };
 
 export default function RootLayout({

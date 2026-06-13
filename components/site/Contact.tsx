@@ -60,64 +60,51 @@ export function Contact() {
         <div className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
           <span className="h-2 w-2 rounded-full bg-primary" /> İletişim & Başvuru
         </div>
-        <h2 className="font-display text-4xl tracking-[-0.035em] md:text-6xl">
+        <h2 className="font-display text-5xl tracking-[-0.035em] md:text-6xl">
           Proje{" "}
           <span className="italic font-serif text-muted-foreground">başlatın.</span>
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-        {/* Left */}
-        <div className="flex flex-col gap-6">
-          <div className="overflow-hidden rounded-3xl border border-border bg-card">
-            <iframe
-              title="Meridyen Film konumu"
-              src="https://www.google.com/maps?q=Moda+Caddesi+Kad%C4%B1k%C3%B6y+%C4%B0stanbul&output=embed"
-              className="h-[320px] w-full"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
+      <div className="relative w-full h-[350px] md:h-[450px] overflow-hidden rounded-3xl border border-border bg-card mb-8">
+        <iframe
+          title="Meridyen Film konumu"
+          src="https://www.google.com/maps?q=Moda+Caddesi+Kad%C4%B1k%C3%B6y+%C4%B0stanbul&output=embed"
+          className="h-full w-full object-cover"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
+      </div>
+
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 relative z-10 -mt-24 md:-mt-32 mx-4 md:mx-8">
+        {/* Left / Info */}
+        <div className="flex flex-col gap-6 order-2 lg:order-1 mt-4 lg:mt-0">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div className="rounded-2xl border border-border bg-card p-5">
-              <div className="text-xs uppercase tracking-wider text-muted-foreground">
+            <div className="rounded-[2rem] border border-border bg-background p-6 sm:col-span-2 transition-all hover:border-foreground/20 hover:shadow-lg">
+              <div className="text-xs uppercase tracking-wider text-muted-foreground mb-1">
                 Adres
               </div>
-              <div className="mt-2 text-sm">Moda Caddesi, Kadıköy / İstanbul</div>
+              <div className="mt-2 text-base font-medium">Moda Caddesi, Kadıköy / İstanbul</div>
             </div>
-            <div className="rounded-2xl border border-border bg-card p-5">
-              <div className="text-xs uppercase tracking-wider text-muted-foreground">
+            <div className="rounded-[2rem] border border-border bg-background p-6 transition-all hover:border-foreground/20 hover:shadow-lg">
+              <div className="text-xs uppercase tracking-wider text-muted-foreground mb-1">
                 Telefon
               </div>
-              <div className="mt-2 text-sm">+90 212 000 00 00</div>
+              <div className="mt-2 text-base font-medium">+90 212 000 00 00</div>
             </div>
-            <div className="rounded-2xl border border-border bg-card p-5">
-              <div className="text-xs uppercase tracking-wider text-muted-foreground">
+            <div className="rounded-[2rem] border border-border bg-background p-6 transition-all hover:border-foreground/20 hover:shadow-lg">
+              <div className="text-xs uppercase tracking-wider text-muted-foreground mb-1">
                 E-posta
               </div>
-              <div className="mt-2 text-sm">info@meridyenfilm.com</div>
+              <div className="mt-2 text-base font-medium">info@meridyenfilm.com</div>
             </div>
-            <a
-              href="https://wa.me/902120000000"
-              className="group flex items-center justify-between rounded-2xl lime-pill p-5 transition-transform hover:scale-[1.02]"
-            >
-              <div>
-                <div className="text-xs uppercase tracking-wider opacity-70">
-                  Hızlı İletişim
-                </div>
-                <div className="mt-2 text-sm font-semibold">WhatsApp Hattı</div>
-              </div>
-              <span className="grid h-9 w-9 place-items-center rounded-full bg-background text-foreground transition-transform group-hover:rotate-45">
-                ↗
-              </span>
-            </a>
           </div>
         </div>
 
         {/* Form */}
         <form
           onSubmit={onSubmit}
-          className="flex flex-col gap-4 rounded-3xl border border-border bg-card p-6 md:p-8"
+          className="flex flex-col gap-4 rounded-3xl border border-border bg-card p-6 md:p-8 shadow-2xl order-1 lg:order-2"
         >
           <div>
             <label className="mb-2 block text-xs uppercase tracking-wider text-muted-foreground">
