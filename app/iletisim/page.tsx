@@ -17,6 +17,29 @@ export const metadata: Metadata = {
   },
 };
 
+const faqs = [
+  {
+    q: "Meridyen Film Yapım güvenilir mi?",
+    a: "Meridyen Film Yapım, İstanbul merkezli bağımsız bir film yapım şirketidir. Şirket faaliyetlerini resmi ticari kayıtları kapsamında yasal ve şeffaf bir şekilde yürütmektedir. Başvuru süreçleri tamamen ücretsizdir; Meridyen Film Yapım hiçbir koşulda kayıt, dosya, albüm veya üyelik ücreti talep etmez. Tüm başvurular KVKK kapsamında değerlendirilir ve süreçler şeffaf iletişim ilkeleri doğrultusunda yürütülür.",
+  },
+  {
+    q: "Meridyen Film Yapım başvuru ücreti alıyor mu?",
+    a: "Hayır. Meridyen Film Yapım hiçbir koşulda kayıt ücreti, dosya ücreti, albüm ücreti veya üyelik bedeli talep etmez. Başvurular tamamen ücretsiz olarak resmi dijital kanallar üzerinden alınır ve proje ihtiyaçlarına göre nesnel kriterlerle değerlendirilir.",
+  },
+  {
+    q: "Oyuncu başvurusu nasıl yapılır?",
+    a: "Başvurular yalnızca resmi web sitesi üzerinden, KVKK onayıyla dijital olarak kabul edilir. Adaylar; güncel fotoğrafları, portfolyoları, varsa IMDb ve showreel linkleriyle birlikte başvuru formunu doldurarak süreci tamamlar. Resmi kanal dışındaki hiçbir platformdan başvuru kabul edilmemektedir.",
+  },
+  {
+    q: "Başvuruma ne kadar sürede dönüş yapılır?",
+    a: "Başvurular ve proje talepleri, yapım takvimi ve proje yoğunluğuna bağlı olarak değerlendirilir. İncelemeler sonucunda güncel projeler için uygun bulunan adaylarla, formda belirttikleri e-posta veya telefon numarası aracılığıyla doğrudan iletişime geçilir.",
+  },
+  {
+    q: "Ofise randevusuz gelebilir miyim?",
+    a: "Şirket bünyesindeki tüm görüşmeler, cast mülakatları ve toplantılar randevu usulü ile yürütülmektedir. Telefon, e-posta veya web sitesi üzerindeki iletişim formu aracılığıyla ön iletişim kurduktan sonra onaylanan takvim doğrultusunda ofis ziyareti planlanabilmektedir.",
+  },
+];
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -55,32 +78,14 @@ const jsonLd = {
     },
     {
       "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Başvuruma ne kadar sürede dönüş yapılır?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Tüm başvurular ve proje talepleri en kısa süre içinde değerlendirilir ve size whatsapp veya telefon ile dönüş yapılır. Yoğun dönemlerde bu süre kısa bir miktar uzayabilir.",
-          },
+      "mainEntity": faqs.map((f) => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": f.a,
         },
-        {
-          "@type": "Question",
-          "name": "Ofise randevusuz gelebilir miyim?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Görüşmelerimiz randevu ile yürütülmektedir. Telefon, e-posta veya form üzerinden ön iletişim kurduktan sonra ofis ziyareti planlayabiliriz.",
-          },
-        },
-        {
-          "@type": "Question",
-          "name": "Proje teklifi almak için hangi bilgileri iletmeliyim?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Formdaki \"Marka / Proje Başlat\" seçeneğini kullanarak projenizin türü, tahmini kapsamı ve hedef yayın mecrası hakkında kısa bir özet iletmeniz yeterlidir. Detaylı brifing görüşmesi sonrasında kapsamlı ve şeffaf bir teklif sunulur.",
-          },
-        },
-      ],
+      })),
     },
     {
       "@type": "BreadcrumbList",
@@ -101,21 +106,6 @@ const jsonLd = {
     },
   ],
 };
-
-const faqs = [
-  {
-    q: "Başvuruma ne kadar sürede dönüş yapılır?",
-    a: "Tüm başvurular ve proje talepleri en kısa süre içinde değerlendirilir ve size whatsapp veya telefon ile dönüş yapılır. Yoğun dönemlerde bu süre kısa bir miktar uzayabilir.",
-  },
-  {
-    q: "Ofise randevusuz gelebilir miyim?",
-    a: "Görüşmelerimiz randevu ile yürütülmektedir. Telefon, e-posta veya form üzerinden ön iletişim kurduktan sonra ofis ziyareti planlayabiliriz.",
-  },
-  {
-    q: "Proje teklifi almak için hangi bilgileri iletmeliyim?",
-    a: "Formdaki \"Marka / Proje Başlat\" seçeneğini kullanarak projenizin türü, tahmini kapsamı ve hedef yayın mecrası hakkında kısa bir özet iletmeniz yeterlidir. Detaylı brifing görüşmesi sonrasında kapsamlı ve şeffaf bir teklif sunulur.",
-  },
-];
 
 export default function ContactPage() {
   return (

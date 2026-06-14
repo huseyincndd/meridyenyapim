@@ -49,7 +49,7 @@ const items = [
     initials: "MA",
     name: "Murat Arslan",
     role: "Set Amiri & Prodüksiyon Koordinatörü",
-    quote: "16 yıllık sektörel deneyimim boyunca çok sayıda sette çalıştım ancak Meridyen Film Yapım'ın kurumsal şeffaflık ve sözleşme disiplini seviyesine az rastladım. İstanbul merkez ofisimizden çıkan lojistik planlama, set izinleri ve ekipman parkuru yönetimi sayesinde en zorlu dönem projelerinde bile sıfır aksamayla ana çekim süreçlerini tamamlıyoruz. Set arkasındaki gizli kahramanlara hak ettikleri değeri veren bir şirket."
+    quote: "17 yıllık sektörel deneyimim boyunca çok sayıda sette çalıştım ancak Meridyen Film Yapım'ın kurumsal şeffaflık ve sözleşme disiplini seviyesine az rastladım. İstanbul merkez ofisimizden çıkan lojistik planlama, set izinleri ve ekipman parkuru yönetimi sayesinde en zorlu dönem projelerinde bile sıfır aksamayla ana çekim süreçlerini tamamlıyoruz. Set arkasındaki gizli kahramanlara hak ettikleri değeri veren bir şirket."
   },
   {
     initials: "MY",
@@ -101,30 +101,90 @@ const items = [
   }
 ];
 
-export function Testimonials() {
-  const [index, setIndex] = useState(0);
-  const scrollRef = useRef<HTMLDivElement>(null);
+import { FadeIn } from "./FadeIn";
 
-  const scroll = (direction: "left" | "right") => {
-    if (scrollRef.current) {
-      const { clientWidth } = scrollRef.current;
-      const scrollAmount = direction === "left" ? -clientWidth : clientWidth;
-      scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    }
-  };
+type Testimonial = typeof items[number];
 
-  const handleScroll = () => {
-    if (scrollRef.current) {
-      const scrollLeft = scrollRef.current.scrollLeft;
-      const width = scrollRef.current.clientWidth;
-      const newIndex = Math.round(scrollLeft / width);
-      setIndex(newIndex);
-    }
-  };
+function TestimonialCard({ t }: { t: Testimonial }) {
+  return (
+    <article className="flex h-full w-[320px] shrink-0 flex-col justify-between rounded-2xl border border-border bg-card p-8 md:w-[400px]">
+      <div>
+        <div className="mb-6 flex items-start justify-between">
+          <div className="flex items-center gap-2 text-sm font-medium">
+            <span>5.0<span className="text-muted-foreground">/5</span></span>
+            <div className="flex text-primary text-base">
+              ★★★★★
+            </div>
+          </div>
+          <div className="font-serif text-6xl leading-none text-muted-foreground/20">
+            ”
+          </div>
+        </div>
+        <p className="text-base leading-relaxed text-foreground/90">
+          {t.quote}
+        </p>
+      </div>
+      <div className="mt-10 flex items-center gap-4">
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-foreground/10 text-sm font-bold">
+          {t.initials}
+        </span>
+        <div>
+          <div className="text-sm font-semibold">{t.name}</div>
+          <div className="text-xs text-muted-foreground">{t.role}</div>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+function MarqueeRow({ items, direction = "left", speed = "100s" }: { items: Testimonial[]; direction?: "left" | "right", speed?: string }) {
+  const row = [...items, ...items, ...items];
 
   return (
-    <section id="referanslar" className="mx-auto max-w-5xl px-6 py-24 md:py-32">
-      <div className="mb-12 text-center">
+    <div className="relative overflow-hidden py-2">
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-background to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-background to-transparent" />
+      <div className="flex">
+        <div
+          className="flex shrink-0 gap-6 pr-6"
+          style={{
+            animationName: "marquee",
+            animationDuration: speed,
+            animationTimingFunction: "linear",
+            animationIterationCount: "infinite",
+            animationDirection: direction === "right" ? "reverse" : "normal",
+            animationPlayState: "running"
+          }}
+        >
+          {row.map((t, i) => (
+            <TestimonialCard key={i} t={t} />
+          ))}
+        </div>
+        <div
+          className="flex shrink-0 gap-6 pr-6"
+          aria-hidden="true"
+          style={{
+            animationName: "marquee",
+            animationDuration: speed,
+            animationTimingFunction: "linear",
+            animationIterationCount: "infinite",
+            animationDirection: direction === "right" ? "reverse" : "normal",
+            animationPlayState: "running"
+          }}
+        >
+          {row.map((t, i) => (
+            <TestimonialCard key={i} t={t} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function Testimonials() {
+  return (
+    <section id="referanslar" className="py-24 md:py-32">
+      <FadeIn className="mx-auto mb-16 max-w-7xl px-6 text-center">
         <div className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
           <span className="h-2 w-2 rounded-full bg-primary" /> Başarı Hikayeleri
         </div>
@@ -132,57 +192,10 @@ export function Testimonials() {
           Birlikte çalıştığımız{" "}
           <span className="italic font-serif text-muted-foreground">isimler.</span>
         </h2>
-      </div>
+      </FadeIn>
 
-      <div className="relative">
-        <div 
-          ref={scrollRef}
-          onScroll={handleScroll}
-          className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden rounded-[2rem] border border-border bg-card shadow-sm"
-        >
-          {items.map((t, i) => (
-            <div key={i} className="w-full shrink-0 snap-center p-8 md:p-16 flex flex-col items-center text-center">
-              <div className="mb-8 text-2xl tracking-[0.2em] text-primary">★★★★★</div>
-              
-              <blockquote className="font-serif text-lg leading-relaxed text-foreground/90 md:text-2xl max-w-4xl">
-                "{t.quote}"
-              </blockquote>
-              
-              <div className="mt-12 flex flex-col items-center justify-center gap-3">
-                <span className="grid h-14 w-14 place-items-center rounded-full bg-foreground font-display text-lg text-background">
-                  {t.initials}
-                </span>
-                <div>
-                  <div className="text-lg font-semibold">{t.name}</div>
-                  <div className="text-sm text-muted-foreground">{t.role}</div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-        
-        {/* Navigation */}
-        <div className="mt-8 flex items-center justify-between px-2 md:px-6">
-          <button 
-            onClick={() => scroll("left")} 
-            className="group flex h-14 w-14 items-center justify-center rounded-full border border-border bg-card transition-all hover:border-primary/50 hover:bg-primary/5 hover:text-primary focus:outline-none"
-            aria-label="Önceki"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:-translate-x-1"><path d="M15 18l-6-6 6-6" /></svg>
-          </button>
-          
-          <div className="font-display tracking-widest text-muted-foreground">
-            {String(index + 1).padStart(2, '0')} / {String(items.length).padStart(2, '0')}
-          </div>
-          
-          <button 
-            onClick={() => scroll("right")} 
-            className="group flex h-14 w-14 items-center justify-center rounded-full border border-border bg-card transition-all hover:border-primary/50 hover:bg-primary/5 hover:text-primary focus:outline-none"
-            aria-label="Sonraki"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:translate-x-1"><path d="M9 18l6-6-6-6" /></svg>
-          </button>
-        </div>
+      <div className="flex flex-col gap-6">
+        <FadeIn delay={100}><MarqueeRow items={items} direction="left" speed="800s" /></FadeIn>
       </div>
     </section>
   );

@@ -13,6 +13,20 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/hizmetler/dijital-icerik',
+        destination: '/hizmetler',
+        permanent: true,
+      },
+      {
+        source: '/yapim-yonetimi',
+        destination: '/hizmetler',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

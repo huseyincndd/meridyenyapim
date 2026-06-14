@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { blogs } from "@/lib/blogs";
 import { FallbackImage } from "@/components/site/FallbackImage";
+import { FadeIn } from "@/components/site/FadeIn";
 
 export function Blog() {
   return (
     <section id="blog" className="mx-auto max-w-7xl px-6 py-24 md:py-32">
-      <div className="mb-12">
+      <FadeIn className="mb-12">
         <div className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-primary">
           <span className="h-2 w-2 rounded-full bg-primary" /> Bilgi Merkezi
         </div>
@@ -13,14 +14,14 @@ export function Blog() {
           Yapım dünyasından{" "}
           <span className="italic font-serif text-muted-foreground">notlar.</span>
         </h2>
-      </div>
+      </FadeIn>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {blogs.map((p, i) => (
-          <Link
-            key={i}
-            href={`/blog/${p.slug}`}
-            className="group overflow-hidden rounded-3xl border border-border bg-card transition-colors hover:border-foreground/30 flex flex-col"
-          >
+          <FadeIn key={i} delay={i * 150} className="h-full">
+            <Link
+              href={`/blog/${p.slug}`}
+              className="group overflow-hidden h-full rounded-3xl border border-border bg-card transition-all duration-500 hover:-translate-y-2 hover:border-primary/30 hover:shadow-[0_20px_40px_-15px_rgba(162,255,50,0.1)] flex flex-col"
+            >
             <div className="relative aspect-[16/9] overflow-hidden bg-muted/30">
               <FallbackImage
                 src={p.image}
@@ -40,15 +41,16 @@ export function Blog() {
                 Daha Fazlası <span aria-hidden>→</span>
               </div>
             </div>
-          </Link>
+            </Link>
+          </FadeIn>
         ))}
       </div>
-      <div className="mt-12 text-center">
-        <Link href="/blog" className="inline-flex items-center justify-center gap-3 rounded-full border border-border hover:bg-card px-8 py-4 text-sm md:text-base font-semibold transition-all group">
+      <FadeIn delay={300} className="mt-12 text-center">
+        <Link href="/blog" className="inline-flex items-center justify-center gap-3 rounded-full border border-border hover:bg-card px-8 py-4 text-sm md:text-base font-semibold transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-[0_10px_20px_-10px_rgba(162,255,50,0.2)] group">
           Tüm Makaleleri Oku
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:translate-x-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-300 group-hover:translate-x-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </Link>
-      </div>
+      </FadeIn>
     </section>
   );
 }

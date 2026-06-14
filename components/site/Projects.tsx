@@ -78,7 +78,7 @@ type Project = (typeof top)[number];
 
 function Card({ p }: { p: Project }) {
   return (
-    <article className="group relative w-[320px] shrink-0 overflow-hidden rounded-3xl border border-border bg-card md:w-[460px]">
+    <article className="group relative w-[320px] shrink-0 overflow-hidden rounded-3xl border border-border bg-card md:w-[460px] transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:shadow-[0_15px_30px_-10px_rgba(162,255,50,0.15)]">
       <div className="relative aspect-video overflow-hidden">
         <img
           src={p.img}
@@ -86,13 +86,13 @@ function Card({ p }: { p: Project }) {
           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
           loading="lazy"
         />
-        <span className="absolute left-4 top-4 rounded-full bg-background/90 px-3 py-1 text-xs font-medium backdrop-blur">
+        <span className="absolute left-4 top-4 rounded-full bg-background/90 px-3 py-1 text-xs font-medium backdrop-blur transition-colors duration-300 group-hover:bg-primary group-hover:text-background">
           {p.status}
         </span>
       </div>
       <div className="flex items-end justify-between gap-3 p-5">
         <div>
-          <h3 className="font-display text-xl">{p.title}</h3>
+          <h3 className="font-display text-xl transition-colors duration-300 group-hover:text-primary">{p.title}</h3>
           <div className="text-xs text-muted-foreground">{p.type}</div>
         </div>
         <div className="font-display text-base text-muted-foreground">{p.year}</div>
@@ -105,8 +105,6 @@ function Row({ items, direction }: { items: Project[]; direction: "left" | "righ
   const row = [...items, ...items, ...items];
   return (
     <div className="relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-background to-transparent" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-background to-transparent" />
       <div className="flex">
         <div
           className="flex shrink-0 gap-5 pr-5"
@@ -136,10 +134,12 @@ function Row({ items, direction }: { items: Project[]; direction: "left" | "righ
   );
 }
 
+import { FadeIn } from "./FadeIn";
+
 export function Projects() {
   return (
     <section id="projeler" className="py-24 md:py-32">
-      <div className="mx-auto mb-12 max-w-7xl px-6">
+      <FadeIn className="mx-auto mb-12 max-w-7xl px-6">
         <div className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
           <span className="h-2 w-2 rounded-full bg-primary" /> Filmografi
         </div>
@@ -147,10 +147,10 @@ export function Projects() {
           Öne çıkan{" "}
           <span className="italic font-serif text-muted-foreground">projelerimiz.</span>
         </h2>
-      </div>
+      </FadeIn>
       <div className="flex flex-col gap-6">
-        <Row items={top} direction="left" />
-        <Row items={bottom} direction="right" />
+        <FadeIn delay={100}><Row items={top} direction="left" /></FadeIn>
+        <FadeIn delay={200}><Row items={bottom} direction="right" /></FadeIn>
       </div>
     </section>
   );

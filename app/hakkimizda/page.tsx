@@ -16,58 +16,50 @@ export const metadata: Metadata = {
   },
 };
 
+const faqs = [
+  {
+    q: "Meridyen Film Yapım resmi olarak ne zaman kurulmuştur?",
+    a: "Meridyen Film Yapım, 2009 yılında İstanbul merkezli olarak kurulmuş resmi ve bağımsız bir film yapım şirketidir."
+  },
+  {
+    q: "Meridyen Film Yapım güvenilir mi?",
+    a: "Meridyen Film Yapım, faaliyetlerini resmi ticari kayıtları kapsamında yasal ve şeffaf bir şekilde yürütmektedir. Şirket, etik yapımcılık ilkeleri gereği hiçbir başvuru sürecinden kayıt, dosya veya albüm ücreti talep etmez."
+  },
+  {
+    q: "Şirketin faaliyet alanları nelerdir?",
+    a: "Şirket; sinema, dizi, reklam campaigns (kampanyaları) ve 9:16 dikey formatlı içerik projelerinin prodüksiyon ve post-prodüksiyon süreçlerinde faaliyet göstermektedir."
+  },
+  {
+    q: "Yapım şirketi ne iş yapar?",
+    a: "Bir yapım şirketi; sinema, dizi, reklam ve dijital içerik projelerinin fikir aşamasından senaryolaştırılmasına, bütçelendirmeden saha çekimine (prodüksiyon) ve stüdyoda kurgu ile ses süreçlerinin tamamlanmasına kadar tüm kreatif, finansal ve operasyonel süreçleri uçtan uca yönetir."
+  },
+  {
+    q: "Reklam filmi yapım süreci nasıl ilerler?",
+    a: "Reklam filmi yapım süreci; markadan alınan brifing doğrultusunda senaryo ve storyboard hazırlanması, cast (oyuncu) seçimi ve mekan keşfi, profesyonel set ortamında ana çekimlerin gerçekleştirilmesi ve ardından post-prodüksiyonda marka mesajının optimize edilmesi aşamalarıyla tamamlanır."
+  },
+  {
+    q: "Dijital içerik projeleri geliştiriyor musunuz?",
+    a: "Evet. Meridyen Film Yapım, geleneksel yapımların yanı sıra sosyal medya platformları ve dijital yayın kanalları için kısa ve orta form dijital içerik projeleri ile 9:16 formatında dikey dizi yapımları da gerçekleştirmektedir."
+  },
+  {
+    q: "Başvuru yapmak ücretli midir?",
+    a: "Hayır. Meridyen Film Yapım, etik yapımcılık ilkeleri gereği başvurulardan hiçbir ad altında kayıt, dosya veya albüm ücreti talep etmez. Tüm başvurular ücretsiz ve KVKK güvencesi altında değerlendirilir."
+  }
+];
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Yapım şirketi ne iş yapar?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text":
-              "Bir yapım şirketi; sinema, dizi, reklam ve dijital içerik projelerinin fikir aşamasından senaryolaştırılmasına, bütçelendirmeden saha çekimine (prodüksiyon) ve stüdyoda kurgu ile ses süreçlerinin tamamlanmasına kadar tüm kreatif, finansal ve operasyonel süreçleri uçtan uca yönetir.",
-          },
+      "mainEntity": faqs.map((f) => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": f.a,
         },
-        {
-          "@type": "Question",
-          "name": "Meridyen Film Yapım hangi alanlarda faaliyet gösterir?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text":
-              "Meridyen Film Yapım; sinema filmleri, televizyon dizileri, reklam filmleri, dijital içerik projeleri, dikey dizi formatları, yapım yönetimi ve post-prodüksiyon hizmetleri alanlarında faaliyet göstermektedir.",
-          },
-        },
-        {
-          "@type": "Question",
-          "name": "Reklam filmi yapım süreci nasıl ilerler?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text":
-              "Reklam filmi yapım süreci; markadan alınan brifing doğrultusunda senaryo ve storyboard hazırlanması, cast (oyuncu) seçimi ve mekan keşfi, profesyonel set ortamında ana çekimlerin gerçekleştirilmesi ve ardından post-prodüksiyonda marka mesajının optimize edilmesi aşamalarıyla tamamlanır.",
-          },
-        },
-        {
-          "@type": "Question",
-          "name": "Dijital içerik projeleri geliştiriyor musunuz?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text":
-              "Evet. Meridyen Film Yapım, geleneksel yapımların yanı sıra sosyal medya platformları ve dijital yayın kanalları için kısa ve orta form dijital içerik projeleri ile 9:16 formatında dikey dizi yapımları da gerçekleştirmektedir.",
-          },
-        },
-        {
-          "@type": "Question",
-          "name": "Başvuru yapmak ücretli midir?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text":
-              "Hayır. Meridyen Film Yapım, etik yapımcılık ilkeleri gereği başvurulardan hiçbir ad altında kayıt, dosya veya albüm ücreti talep etmez. Tüm başvurular ücretsiz ve KVKK güvencesi altında değerlendirilir.",
-          },
-        },
-      ],
+      })),
     },
     {
       "@type": "AboutPage",
@@ -97,29 +89,6 @@ const jsonLd = {
     },
   ],
 };
-
-const faqs = [
-  {
-    q: "Yapım şirketi ne iş yapar?",
-    a: "Bir yapım şirketi; sinema, dizi, reklam ve dijital içerik projelerinin fikir aşamasından senaryolaştırılmasına, bütçelendirmeden saha çekimine (prodüksiyon) ve stüdyoda kurgu ile ses süreçlerinin tamamlanmasına kadar tüm kreatif, finansal ve operasyonel süreçleri uçtan uca yönetir."
-  },
-  {
-    q: "Meridyen Film Yapım hangi alanlarda faaliyet gösterir?",
-    a: "Meridyen Film Yapım; sinema filmleri, televizyon dizileri, reklam filmleri, dijital içerik projeleri, dikey dizi formatları, yapım yönetimi ve post-prodüksiyon hizmetleri alanlarında faaliyet göstermektedir."
-  },
-  {
-    q: "Reklam filmi yapım süreci nasıl ilerler?",
-    a: "Reklam filmi yapım süreci; markadan alınan brifing doğrultusunda senaryo ve storyboard hazırlanması, cast (oyuncu) seçimi ve mekan keşfi, profesyonel set ortamında ana çekimlerin gerçekleştirilmesi ve ardından post-prodüksiyonda marka mesajının optimize edilmesi aşamalarıyla tamamlanır."
-  },
-  {
-    q: "Dijital içerik projeleri geliştiriyor musunuz?",
-    a: "Evet. Meridyen Film Yapım, geleneksel yapımların yanı sıra sosyal medya platformları ve dijital yayın kanalları için kısa ve orta form dijital içerik projeleri ile 9:16 formatında dikey dizi yapımları da gerçekleştirmektedir."
-  },
-  {
-    q: "Başvuru yapmak ücretli midir?",
-    a: "Hayır. Meridyen Film Yapım, etik yapımcılık ilkeleri gereği başvurulardan hiçbir ad altında kayıt, dosya veya albüm ücreti talep etmez. Tüm başvurular ücretsiz ve KVKK güvencesi altında değerlendirilir."
-  }
-];
 
 export default function AboutPage() {
   return (

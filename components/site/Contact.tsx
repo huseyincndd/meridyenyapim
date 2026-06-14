@@ -27,6 +27,8 @@ const schema = z.object({
   consent: z.boolean().refine((val) => val === true, "Onay gerekli"),
 });
 
+import { FadeIn } from "./FadeIn";
+
 export function Contact() {
   const [status, setStatus] = useState<"idle" | "ok" | "err">("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -55,8 +57,8 @@ export function Contact() {
   }
 
   return (
-    <section id="iletisim" className="mx-auto max-w-7xl px-6 py-24 md:py-32">
-      <div className="mb-12">
+    <section id="iletisim" className="mx-auto max-w-7xl px-6 py-24 md:py-32 flex flex-col">
+      <FadeIn className="order-1 mb-12">
         <div className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
           <span className="h-2 w-2 rounded-full bg-primary" /> İletişim & Başvuru
         </div>
@@ -64,19 +66,21 @@ export function Contact() {
           Proje{" "}
           <span className="italic font-serif text-muted-foreground">başlatın.</span>
         </h2>
-      </div>
+      </FadeIn>
 
-      <div className="relative w-full h-[350px] md:h-[450px] overflow-hidden rounded-3xl border border-border bg-card mb-8">
-        <iframe
-          title="Meridyen Film konumu"
-          src="https://www.google.com/maps?q=Moda+Caddesi+Kad%C4%B1k%C3%B6y+%C4%B0stanbul&output=embed"
-          className="h-full w-full object-cover"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
-      </div>
+      <FadeIn delay={150} className="order-3 md:order-2 mt-12 md:mt-0">
+        <div className="relative w-full h-[350px] md:h-[450px] overflow-hidden rounded-3xl border border-border bg-card md:mb-8">
+          <iframe
+            title="Meridyen Film Yapım konumu"
+            src="https://www.google.com/maps?q=Moda+Caddesi+Kad%C4%B1k%C3%B6y+%C4%B0stanbul&output=embed"
+            className="h-full w-full object-cover"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </FadeIn>
 
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 relative z-10 -mt-24 md:-mt-32 mx-4 md:mx-8">
+      <FadeIn delay={300} className="order-2 md:order-3 grid grid-cols-1 gap-8 lg:grid-cols-2 relative z-10 md:-mt-32 md:mx-8">
         {/* Left / Info */}
         <div className="flex flex-col gap-6 order-2 lg:order-1 mt-4 lg:mt-0">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -197,7 +201,7 @@ export function Contact() {
             </p>
           )}
         </form>
-      </div>
+      </FadeIn>
     </section>
   );
 }

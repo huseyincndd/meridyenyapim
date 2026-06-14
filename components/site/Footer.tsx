@@ -22,7 +22,12 @@ export function Footer() {
   ];
 
   return (
-    <footer className="border-t border-border bg-foreground text-background relative z-50">
+    <footer className="border-t border-border bg-black text-white [.dark_&]:bg-white [.dark_&]:text-black relative z-50">
+      <div className="border-b border-white/10 [.dark_&]:border-transparent bg-white/5 [.dark_&]:bg-black [.dark_&]:text-white py-5 px-6 text-center text-xs md:text-sm">
+        <p className="mx-auto max-w-5xl opacity-90">
+          <strong className="font-semibold text-primary">Önemli Bilgi:</strong> Meridyen Film Yapım, etik yapımcılık ilkeleri gereği başvurulardan hiçbir ad altında kayıt, dosya veya albüm ücreti talep etmez. Tüm başvurular ücretsiz ve KVKK güvencesi altında değerlendirilir.
+        </p>
+      </div>
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Col 1 */}
@@ -38,7 +43,7 @@ export function Footer() {
                   strokeLinecap="round"
                 />
               </svg>
-              <span className="font-display text-lg">MERİDYEN FİLM</span>
+              <span className="font-display text-lg">MERİDYEN FİLM YAPIM</span>
             </div>
             <p className="mt-5 text-sm opacity-80">
               Hikâyeleri Görüntüye Dönüştüren Yapım Şirketi.
@@ -102,9 +107,9 @@ export function Footer() {
         </div>
 
         <div className="mt-16 border-t border-background/15 pt-6 text-xs opacity-70">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>© 2010 Meridyen Film. Tüm hakları saklıdır. İstanbul.</div>
-            <a href="#top" className="hover:text-primary">
+          <div className="flex flex-col md:flex-row flex-wrap items-center justify-between gap-4">
+            <div className="text-center md:text-left">© 2009 Meridyen Film Yapım Prodüksiyon Reklam Hizmetleri San. ve Tic. Ltd. Şti. Tüm hakları saklıdır. İstanbul.</div>
+            <a href="#top" className="hover:text-primary transition-colors">
               Yukarı Dön ↑
             </a>
           </div>

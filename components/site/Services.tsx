@@ -53,37 +53,36 @@ export function Services() {
         </div>
         <a
           href="/iletisim"
-          className="rounded-full border border-border bg-card px-5 py-2.5 text-sm hover:bg-secondary"
+          className="group inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm transition-all duration-300 hover:border-primary hover:bg-secondary hover:-translate-y-1"
         >
-          Daha Fazlası →
+          Daha Fazlası <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
         </a>
       </FadeIn>
 
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-        {services.map((s) => (
-          <article
-            key={s.n}
-            className="group relative flex flex-col overflow-hidden rounded-3xl border border-border bg-card transition-all hover:-translate-y-1 hover:border-primary hover:shadow-[0_0_30px_rgba(162,255,50,0.15)]"
-          >
-            <div className="relative aspect-[4/5] overflow-hidden">
-              <img
-                src={s.img}
-                alt={s.title}
-                loading="lazy"
-                className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
-              />
-              <span className="absolute left-4 top-4 rounded-full bg-foreground text-primary px-3 py-1 font-display text-sm shadow-md">
-                {s.n}
-              </span>
-            </div>
-            <div className="flex flex-1 flex-col p-5">
-              <h3 className="font-display text-xl md:text-2xl">{s.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
-              <span className="mt-4 inline-block w-fit rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-[11px] uppercase tracking-wider text-foreground">
-                {s.tag}
-              </span>
-            </div>
-          </article>
+        {services.map((s, i) => (
+          <FadeIn key={s.n} delay={i * 100}>
+            <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-card transition-all duration-500 hover:-translate-y-2 hover:border-primary/50 hover:shadow-[0_20px_40px_-15px_rgba(162,255,50,0.15)]">
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <img
+                  src={s.img}
+                  alt={s.title}
+                  loading="lazy"
+                  className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                />
+                <span className="absolute left-4 top-4 rounded-full bg-foreground text-primary px-3 py-1 font-display text-sm shadow-md">
+                  {s.n}
+                </span>
+              </div>
+              <div className="flex flex-1 flex-col p-5">
+                <h3 className="font-display text-xl md:text-2xl">{s.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
+                <span className="mt-4 inline-block w-fit rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-[11px] uppercase tracking-wider text-foreground transition-colors duration-300 group-hover:bg-primary group-hover:text-background">
+                  {s.tag}
+                </span>
+              </div>
+            </article>
+          </FadeIn>
         ))}
       </div>
     </section>

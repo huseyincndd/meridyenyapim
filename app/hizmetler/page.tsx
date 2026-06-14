@@ -17,6 +17,41 @@ export const metadata: Metadata = {
   },
 };
 
+const faqs = [
+  {
+    q: "Sadece bir hizmet kalemi için çalışıyor musunuz, yoksa tüm süreci mi yönetiyorsunuz?",
+    a: "Her ikisi de mümkündür. Projelerimiz ekseriyetle fikir aşamasından nihai yayın teslimine kadar uçtan uca yönetilir. Ancak endüstriyel esnekliğimiz gereği; harici projeleriniz için yalnızca post-prodüksiyon stüdyosu kullanımı, yalnızca saha çekim yönetimi veya yalnızca senaryo geliştirme gibi bağımsız tekil hizmetler de sunmaktayız."
+  },
+  {
+    q: "Bir reklam filmi projesi ne kadar sürer?",
+    a: "Projenin kreatif kapsamına, senaryonun mekan/cast karmaşıklığına ve post-prodüksiyon gereksinimlerine bağlı olarak takvim değişiklik gösterir. Pre-prodüksiyon aşamasından nihai teslimata kadar olan tüm süreç, çekim öncesinde şeffaf bir iş planıyla sunulur ve taahhüt edilen tarihte teslim edilir."
+  },
+  {
+    q: "İstanbul dışında veya yurt dışında çekim yapıyor musunuz?",
+    a: "Evet. Meridyen Film Yapım olarak hem Türkiye genelinde hem de yurt dışı bölgelerde saha ve set yönetimi sağlıyoruz. Aynı zamanda, Türkiye'de çekim gerçekleştirmek isteyen yabancı yapım şirketlerine de yerel servis prodüksiyonu ve hat yapımcılığı desteği veriyoruz."
+  },
+  {
+    q: "Dikey dizi projesi için bütçe nasıl belirlenir?",
+    a: "Dikey dizi bütçesi; toplam bölüm sayısına, bölüm sürelerine, planlanan ana çekim günlerine, oyuncu kadrosunun ölçeğine ve projenin yayınlanacağı platformun teknik teslim gereksinimlerine göre şekillenir. Brifing sonrasında şeffaf bir bütçe planı hazırlanır."
+  },
+  {
+    q: "Ortak yapım (Co-production) projelerinde yer alıyor musunuz?",
+    a: "Evet. Meridyen Film Yapım, proje bazlı olarak ulusal ve uluslararası ortak yapım modellerinde yapım ortağı olarak yer alabilmektedir. Ortak yapım süreçleri, yasal mevzuatlara ve uluslararası sektörel standartlara tam uyumlu olarak yürütülür."
+  },
+  {
+    q: "Post-prodüksiyon hizmetleriniz harici projelere açık mı?",
+    a: "Evet. Kurgu, ses tasarımı, renk düzenleme ve görsel efekt süreçlerini kapsayan post-prodüksiyon altyapımız, şirket dışındaki bağımsız yönetmen, yapımcı ve ajansların harici projelerine de bağımsız bir servis olarak sunulmaktadır."
+  },
+  {
+    q: "Hizmet süreçlerinizde oyunculardan veya başvuranlardan ücret talep edilir mi?",
+    a: "Hayır. Meridyen Film Yapım bir yapım şirketi olup, etik yapımcılık ilkeleri gereği üstlendiği projelerin hiçbir aşamasında oyuncu adaylarından veya katılımcılardan kayıt, dosya, albüm ya da üyelik ücreti talep etmez."
+  },
+  {
+    q: "Projeleriniz için teknik ve operasyonel standartlarınız nelerdir?",
+    a: "Tüm prodüksiyon ve post-prodüksiyon süreçleri; küresel sinema, televizyon ve dijital platformların (Netflix, Amazon Prime vb.) teknik kabul şartnamelerine, yasal KVKK mevzuatlarına ve telif hakları yönergelerine tam uyumlu olarak yürütülmektedir."
+  }
+];
+
 const jsonLd = [
   {
     "@context": "https://schema.org",
@@ -110,40 +145,14 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Sadece bir hizmet kalemi için çalışıyor musunuz, yoksa tüm süreci mi yönetiyorsunuz?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Her ikisi de mümkündür. Projelerimiz ekseriyetle fikir aşamasından nihai yayın teslimine kadar uçtan uca yönetilir. Ancak endüstriyel esnekliğimiz gereği; harici projeleriniz için yalnızca post-prodüksiyon stüdyosu kullanımı, yalnızca saha çekim yönetimi veya yalnızca senaryo geliştirme gibi bağımsız tekil hizmetler de sunmaktayız.",
-        },
+    "mainEntity": faqs.map((f) => ({
+      "@type": "Question",
+      "name": f.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": f.a,
       },
-      {
-        "@type": "Question",
-        "name": "Bir reklam filmi projesi ne kadar sürer?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Projenin kreatif kapsamına, senaryonun mekan/cast karmaşıklığına ve post-prodüksiyon gereksinimlerine bağlı olarak takvim değişiklik gösterir. Pre-prodüksiyon aşamasından nihai teslimata kadar olan tüm süreç, çekim öncesinde şeffaf bir iş planıyla sunulur ve taahhüt edilen tarihte teslim edilir.",
-        },
-      },
-      {
-        "@type": "Question",
-        "name": "İstanbul dışında veya yurt dışında çekim yapıyor musunuz?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Evet. Meridyen Film Yapım olarak hem Türkiye genelinde hem de yurt dışı bölgelerde saha ve set yönetimi sağlıyoruz. Aynı zamanda, Türkiye'de çekim gerçekleştirmek isteyen yabancı yapım şirketlerine de yerel servis prodüksiyonu ve hat yapımcılığı desteği veriyoruz.",
-        },
-      },
-      {
-        "@type": "Question",
-        "name": "Dikey dizi projesi için bütçe nasıl belirlenir?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Dikey dizi bütçesi; toplam bölüm sayısına, bölüm sürelerine, planlanan ana çekim günlerine, oyuncu kadrosunun ölçeğine ve projenin yayınlanacağı platformun teknik teslim gereksinimlerine göre şekillenir. Brifing sonrasında şeffaf bir bütçe planı hazırlanır.",
-        },
-      },
-    ],
+    })),
   },
   {
     "@context": "https://schema.org",
@@ -244,24 +253,6 @@ const services = [
   }
 ];
 
-const faqs = [
-  {
-    q: "Sadece bir hizmet kalemi için çalışıyor musunuz, yoksa tüm süreci mi yönetiyorsunuz?",
-    a: "Her ikisi de mümkündür. Projelerimiz ekseriyetle fikir aşamasından nihai yayın teslimine kadar uçtan uca yönetilir. Ancak endüstriyel esnekliğimiz gereği; harici projeleriniz için yalnızca post-prodüksiyon stüdyosu kullanımı, yalnızca saha çekim yönetimi veya yalnızca senaryo geliştirme gibi bağımsız tekil hizmetler de sunmaktayız."
-  },
-  {
-    q: "Bir reklam filmi projesi ne kadar sürer?",
-    a: "Projenin kreatif kapsamına, senaryonun mekan/cast karmaşıklığına ve post-prodüksiyon gereksinimlerine bağlı olarak takvim değişiklik gösterir. Pre-prodüksiyon aşamasından nihai teslimata kadar olan tüm süreç, çekim öncesinde şeffaf bir iş planıyla sunulur ve taahhüt edilen tarihte teslim edilir."
-  },
-  {
-    q: "İstanbul dışında veya yurt dışında çekim yapıyor musunuz?",
-    a: "Evet. Meridyen Film Yapım olarak hem Türkiye genelinde hem de yurt dışı bölgelerde saha ve set yönetimi sağlıyoruz. Aynı zamanda, Türkiye'de çekim gerçekleştirmek isteyen yabancı yapım şirketlerine de yerel servis prodüksiyonu ve hat yapımcılığı desteği veriyoruz."
-  },
-  {
-    q: "Dikey dizi projesi için bütçe nasıl belirlenir?",
-    a: "Dikey dizi bütçesi; toplam bölüm sayısına, bölüm sürelerine, planlanan ana çekim günlerine, oyuncu kadrosunun ölçeğine ve projenin yayınlanacağı platformun teknik teslim gereksinimlerine göre şekillenir. Brifing sonrasında şeffaf bir bütçe planı hazırlanır."
-  }
-];
 
 const processSteps = [
   { title: "Geliştirme", desc: "Fikir, senaryo, dramaturji ve bütçe planlaması." },

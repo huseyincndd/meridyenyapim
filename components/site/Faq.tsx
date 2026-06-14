@@ -5,37 +5,31 @@ import { useState } from "react";
 const faqs = [
   {
     q: "Meridyen Film Yapım nedir?",
-    a: "Meridyen Film Yapım; sinema filmleri, televizyon dizileri, reklam filmleri, dijital platform içerikleri ve post-prodüksiyon alanlarında faaliyet gösteren İstanbul merkezli bağımsız bir film yapım şirketidir. Şirket, proje geliştirme aşamasından nihai teslim sürecine kadar yapım süreçlerini profesyonel ekiplerle yönetmektedir."
+    a: "Meridyen Film Yapım, İstanbul merkezli bağımsız bir film yapım şirketidir. Şirket; sinema filmleri, televizyon dizileri, reklam filmleri ve dijital içerik projeleri geliştirmekte, yapım yönetimi ve post prodüksiyon süreçlerini yürütmektedir."
   },
   {
     q: "Meridyen Film Yapım hangi alanlarda faaliyet göstermektedir?",
-    a: "Meridyen Film Yapım; uzun metraj sinema filmleri, televizyon dizileri, dijital platform yapımları, reklam filmleri, kurumsal marka içerikleri, dijital medya projeleri, dikey format içerikler ve post-prodüksiyon hizmetleri alanlarında faaliyet göstermektedir."
+    a: "Meridyen Film Yapım; uzun metraj sinema filmleri, televizyon dizileri, dijital platform yapımları, reklam filmleri, kurumsal marka içerikleri, dijital medya projeleri ve dikey format içerikler alanlarında faaliyet göstermektedir. Şirket ayrıca yapım yönetimi, post-prodüksiyon ve dijital içerik geliştirme süreçlerinde de hizmet sunmaktadır."
   },
   {
     q: "Meridyen Film Yapım bir oyuncu ajansı veya menajerlik şirketi midir?",
-    a: "Hayır. Meridyen Film Yapım bir oyuncu ajansı, casting ajansı veya menajerlik şirketi değildir. Şirketin temel faaliyet alanı film, dizi, reklam ve dijital içerik üretimidir. Oyuncu seçimi süreçleri yalnızca yapımını üstlendiği projelerin ihtiyaçları doğrultusunda yürütülmektedir."
+    a: "Hayır. Meridyen Film Yapım bir oyuncu ajansı, casting ajansı veya menajerlik şirketi değildir. Şirketin temel faaliyet alanı film, dizi, reklam ve dijital içerik üretimidir. Oyuncu seçimi süreçleri yalnızca şirket bünyesinde yapımı üstlenilen projelerin ihtiyaçları doğrultusunda yürütülmektedir."
   },
   {
     q: "Meridyen Film Yapım hangi tür projeler üretmektedir?",
-    a: "Şirket; sinema filmleri, televizyon dizileri, dijital platform projeleri, reklam kampanyaları, kurumsal tanıtım filmleri, marka içerikleri ve yeni nesil dijital medya projeleri geliştirmekte ve üretmektedir."
-  },
-  {
-    q: "Meridyen Film Yapım ortak yapım ve post-prodüksiyon hizmetleri sunuyor mu?",
-    a: "Evet. Meridyen Film Yapım, proje bazlı olarak ulusal ve uluslararası ortak yapım modellerinde yer alabilmekte; ayrıca kurgu, ses tasarımı, renk düzenleme ve görsel post-prodüksiyon süreçlerinde profesyonel hizmet sunabilmektedir."
+    a: "Şirket; sinema filmleri, televizyon dizileri, dijital platform projeleri, reklam kampanyaları, kurumsal tanıtım filmleri, marka içerikleri ve yeni nesil dijital medya projeleri geliştirmekte ve üretmektedir. Üretim süreçleri, projenin yayınlanacağı mecranın teknik dinamiklerine uygun olarak tasarlanmaktadır."
   },
   {
     q: "Meridyen Film Yapım projelerine oyuncu veya senaryo başvurusu yapılabilir mi?",
-    a: "Şirket tarafından duyurulan projeler için oyuncu başvuruları ve proje önerileri ilgili başvuru kanalları üzerinden değerlendirilebilmektedir. Senaryo ve proje başvurularında eser sahipliğinin korunmasına yönelik yasal süreçlerin tamamlanmış olması tavsiye edilmektedir."
+    a: "Evet. Şirket tarafından duyurulan projeler için oyuncu başvuruları ve proje önerileri resmi kurumsal kanallar üzerinden kabul edilmektedir. Meridyen Film Yapım, etik yapımcılık ilkeleri gereği başvurulardan hiçbir ad altında kayıt, dosya, albüm veya üyelik ücreti talep etmez. Senaryo başvurularında ise yasal tescil süreçlerinin tamamlanmış olması tavsiye edilmektedir."
   },
   {
     q: "Meridyen Film Yapım ne zamandan beri faaliyet göstermektedir?",
-    a: "Meridyen Film Yapım, 2010 yılından itibaren yapım ve prodüksiyon alanında faaliyet göstermekte; sinema, televizyon, reklam ve dijital medya projeleri üzerinde çalışmaktadır."
-  },
-  {
-    q: "Meridyen Film Yapım'ın resmi iletişim kanalları nelerdir?",
-    a: "Meridyen Film Yapım ile iletişim, resmi web sitesi, kurumsal e-posta adresleri ve doğrulanmış sosyal medya hesapları üzerinden sağlanmaktadır. Güncel duyurular ve proje bilgilendirmeleri yalnızca resmi iletişim kanalları üzerinden paylaşılmaktadır."
+    a: "Meridyen Film Yapım, 2009 yılından itibaren yapım ve prodüksiyon alanında kesintisiz olarak faaliyet göstermektedir. Şirket, kuruluşundan bu yana sinema, televizyon, reklam ve dijital medya projeleri üzerinde çalışmakta ve 17 yıllık sektörel deneyimini projelerine aktarmaktadır."
   }
 ];
+
+import { FadeIn } from "./FadeIn";
 
 export function Faq() {
   const [open, setOpen] = useState<number | null>(0);
@@ -62,7 +56,7 @@ export function Faq() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="mb-12 text-center">
+      <FadeIn className="mb-12 text-center">
         <div className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
           <span className="h-2 w-2 rounded-full bg-primary" /> Sıkça Sorulan Sorular
         </div>
@@ -70,11 +64,12 @@ export function Faq() {
           Aklınızdaki{" "}
           <span className="italic font-serif text-muted-foreground">her şey.</span>
         </h2>
-      </div>
+      </FadeIn>
       <div className="space-y-3">
         {faqs.map((f, i) => {
           const isOpen = open === i;
           return (
+            <FadeIn key={i} delay={i * 100}>
             <div
               key={i}
               className={`overflow-hidden rounded-2xl border bg-card transition-colors ${
@@ -111,6 +106,7 @@ export function Faq() {
                 </div>
               </div>
             </div>
+            </FadeIn>
           );
         })}
       </div>

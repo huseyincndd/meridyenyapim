@@ -75,14 +75,9 @@ function PressCard({ p }: { p: PressItem }) {
 
 function MarqueeRow({ items, direction = "left", speed = "100s" }: { items: PressItem[]; direction?: "left" | "right", speed?: string }) {
   const row = [...items, ...items, ...items];
-  const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div 
-      className="relative overflow-hidden"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+    <div className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-background to-transparent" />
       <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-background to-transparent" />
       <div className="flex">
@@ -94,7 +89,7 @@ function MarqueeRow({ items, direction = "left", speed = "100s" }: { items: Pres
             animationTimingFunction: "linear",
             animationIterationCount: "infinite",
             animationDirection: direction === "right" ? "reverse" : "normal",
-            animationPlayState: isHovered ? "paused" : "running"
+            animationPlayState: "running"
           }}
         >
           {row.map((p, i) => (
@@ -110,7 +105,7 @@ function MarqueeRow({ items, direction = "left", speed = "100s" }: { items: Pres
             animationTimingFunction: "linear",
             animationIterationCount: "infinite",
             animationDirection: direction === "right" ? "reverse" : "normal",
-            animationPlayState: isHovered ? "paused" : "running"
+            animationPlayState: "running"
           }}
         >
           {row.map((p, i) => (
@@ -122,6 +117,8 @@ function MarqueeRow({ items, direction = "left", speed = "100s" }: { items: Pres
   );
 }
 
+import { FadeIn } from "./FadeIn";
+
 export function Press() {
   const half = Math.ceil(pressItems.length / 2);
   const row1 = pressItems.slice(0, half);
@@ -130,21 +127,21 @@ export function Press() {
   return (
     <section className="relative overflow-hidden py-24 md:py-32">
       <div className="pointer-events-none absolute right-0 top-1/4 -z-10 h-96 w-96 rounded-full bg-primary/10 blur-[120px]" />
-      <div className="mx-auto max-w-7xl px-6">
+      <FadeIn className="mx-auto max-w-7xl px-6">
         <div className="mb-12">
           <div className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
             <span className="h-2 w-2 rounded-full bg-primary" /> Basında
           </div>
           <h2 className="font-display text-4xl tracking-[-0.035em] md:text-6xl">
-            Meridyen Film,{" "}
+            Meridyen Film Yapım,{" "}
             <span className="italic font-serif text-primary">basında.</span>
           </h2>
         </div>
-      </div>
+      </FadeIn>
       
       <div className="flex flex-col gap-6">
-        <MarqueeRow items={row1} direction="left" speed="120s" />
-        <MarqueeRow items={row2} direction="right" speed="125s" />
+        <FadeIn delay={100}><MarqueeRow items={row1} direction="left" speed="120s" /></FadeIn>
+        <FadeIn delay={200}><MarqueeRow items={row2} direction="right" speed="125s" /></FadeIn>
       </div>
     </section>
   );
