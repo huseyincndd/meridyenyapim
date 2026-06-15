@@ -31,19 +31,47 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ProductionCompany",
-  name: "Meridyen Film Yapım",
-  url: "https://meridyenfilm.com",
-  logo: "https://meridyenfilm.com/logo.png",
-  description: "İstanbul merkezli bağımsız film, dizi ve reklam yapım şirketi.",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "İstanbul",
-    addressCountry: "TR"
+const faqs = [
+  {
+    q: "Meridyen Film Yapım nedir?",
+    a: "Meridyen Film Yapım, İstanbul merkezli bağımsız bir film yapım şirketidir. Şirket; sinema filmleri, televizyon dizileri, reklam filmleri ve dijital içerik projeleri geliştirmekte, yapım yönetimi ve post prodüksiyon süreçlerini yürütmektedir."
+  },
+  {
+    q: "Meridyen Film Yapım hangi alanlarda faaliyet göstermektedir?",
+    a: "Meridyen Film Yapım; uzun metraj sinema filmleri, televizyon dizileri, dijital platform yapımları, reklam filmleri, kurumsal marka içerikleri, dijital medya projeleri ve dikey format içerikler alanlarında faaliyet göstermektedir. Şirket ayrıca yapım yönetimi, post-prodüksiyon ve dijital içerik geliştirme süreçlerinde de hizmet sunmaktadır."
+  },
+  {
+    q: "Meridyen Film Yapım bir oyuncu ajansı veya menajerlik şirketi midir?",
+    a: "Hayır. Meridyen Film Yapım bir oyuncu ajansı, casting ajansı veya menajerlik şirketi değildir. Şirketin temel faaliyet alanı film, dizi, reklam ve dijital içerik üretimidir. Oyuncu seçimi süreçleri yalnızca şirket bünyesinde yapımı üstlenilen projelerin ihtiyaçları doğrultusunda yürütülmektedir."
+  },
+  {
+    q: "Meridyen Film Yapım hangi tür projeler üretmektedir?",
+    a: "Şirket; sinema filmleri, televizyon dizileri, dijital platform projeleri, reklam kampanyaları, kurumsal tanıtım filmleri, marka içerikleri ve yeni nesil dijital medya projeleri geliştirmekte ve üretmektedir. Üretim süreçleri, projenin yayınlanacağı mecranın teknik dinamiklerine uygun olarak tasarlanmaktadır."
+  },
+  {
+    q: "Meridyen Film Yapım projelerine oyuncu veya senaryo başvurusu yapılabilir mi?",
+    a: "Evet. Şirket tarafından duyurulan projeler için oyuncu başvuruları ve proje önerileri resmi kurumsal kanallar üzerinden kabul edilmektedir. Meridyen Film Yapım, etik yapımcılık ilkeleri gereği başvurulardan hiçbir ad altında kayıt, dosya, albüm veya üyelik ücreti talep etmez. Senaryo başvurularında ise yasal tescil süreçlerinin tamamlanmış olması tavsiye edilmektedir."
+  },
+  {
+    q: "Meridyen Film Yapım ne zamandan beri faaliyet göstermektedir?",
+    a: "Meridyen Film Yapım, 2009 yılından itibaren yapım ve prodüksiyon alanında kesintisiz olarak faaliyet göstermektedir. Şirket, kuruluşundan bu yana sinema, televizyon, reklam ve dijital medya projeleri üzerinde çalışmakta ve 17 yıllık sektörel deneyimini projelerine aktarmaktadır."
   }
-};
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: f.a
+      }
+    }))
+  }
+];
 
 export default function Home() {
   return (

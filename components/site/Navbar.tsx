@@ -62,7 +62,7 @@ export function Navbar() {
               scrolled ? "px-5 py-2.5" : "px-6 py-3"
             } hover:scale-[1.03]`}
           >
-            Şimdi Başvur
+            Proje Teklifi Gönder
             <span className="grid h-6 w-6 place-items-center rounded-full bg-background text-foreground transition-transform group-hover:rotate-45">
               ↗
             </span>
@@ -126,7 +126,7 @@ export function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="group mt-2 inline-flex items-center justify-center gap-3 rounded-full lime-pill px-6 py-4 text-base font-semibold w-full shadow-[0_10px_40px_-10px_oklch(0.92_0.22_130/0.7)] transition-transform hover:scale-[1.02]"
             >
-              Hemen Başvur
+              Proje Teklifi Gönder
               <span className="grid h-7 w-7 place-items-center rounded-full bg-background text-foreground transition-transform group-hover:rotate-45">
                 ↗
               </span>

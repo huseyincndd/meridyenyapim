@@ -188,7 +188,7 @@ const services = [
       "Festival stratejisi, vizyon organizasyonu ve dijital platform teslimi"
     ],
     link: "/hizmetler/sinema-filmi",
-    image: "/images/services/sinema-filmi.webp"
+    image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2025&auto=format&fit=crop"
   },
   {
     id: "dizi",
@@ -412,7 +412,7 @@ export default function ServicesPage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/iletisim" className="w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-full bg-primary text-primary-foreground px-8 py-4 text-lg font-semibold transition-transform hover:scale-[1.02]">
-                Proje Başlat
+                Proje Teklifi Gönder
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="rotate-45"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
               </Link>
               <Link href="/oyuncu-basvurusu" className="w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-full border border-border hover:bg-card px-8 py-4 text-lg font-semibold transition-all group">

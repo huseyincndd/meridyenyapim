@@ -16,38 +16,38 @@ const container: Variants = {
 
 const item: Variants = {
   hidden: { opacity: 0, y: 40, filter: "blur(10px)" },
-  show: { 
-    opacity: 1, 
-    y: 0, 
+  show: {
+    opacity: 1,
+    y: 0,
     filter: "blur(0px)",
-    transition: { type: "spring", stiffness: 40, damping: 15 } 
+    transition: { type: "spring", stiffness: 40, damping: 15 }
   },
 };
 
 const leftPanel: Variants = {
   hidden: { opacity: 0, x: -50, filter: "blur(10px)" },
-  show: { 
-    opacity: 1, 
-    x: 0, 
+  show: {
+    opacity: 1,
+    x: 0,
     filter: "blur(0px)",
-    transition: { type: "spring", stiffness: 40, damping: 15, delay: 0.5 } 
+    transition: { type: "spring", stiffness: 40, damping: 15, delay: 0.5 }
   },
 };
 
 export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden bg-background">
-      <motion.div 
+      <motion.div
         initial={{ scale: 1.15, opacity: 0, filter: "blur(20px)" }}
         animate={{ scale: 1, opacity: 1, filter: "blur(0px)" }}
         transition={{ duration: 1.8, ease: [0.25, 1, 0.5, 1] }}
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('https://framerusercontent.com/images/LPWGL7rFF0pjhd6IZOMCT5H39XY.jpg')" }}
       />
-      
+
       <div className="relative mx-auto grid max-w-[1440px] grid-cols-1 gap-12 px-6 md:px-12 pb-40 pt-40 lg:pb-56 lg:pt-56 lg:grid-cols-[320px_1fr] lg:gap-20">
         {/* Left identity */}
-        <motion.div 
+        <motion.div
           initial="hidden"
           animate="show"
           variants={leftPanel}
@@ -56,7 +56,7 @@ export function Hero() {
           <div className="flex items-center gap-4">
             <div className="relative h-16 w-16 overflow-hidden rounded-full ring-2 ring-background">
               <img
-                src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=400&auto=format&fit=crop"
+                src="https://villaqrmenu.b-cdn.net/meridyenfilmyapim/meridyen-film-yapim-logo.webp"
                 alt="Meridyen Film Yapım stüdyosu"
                 className="h-full w-full object-cover"
               />
@@ -64,7 +64,7 @@ export function Hero() {
             <div>
               <div className="font-display text-lg">Meridyen Film Yapım</div>
               <div className="text-sm text-muted-foreground">
-                Sinema · Dizi · Dijital Yapım
+                Sinema · Dizi · Reklam Filmi
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@ export function Hero() {
         </motion.div>
 
         {/* Headline */}
-        <motion.div 
+        <motion.div
           variants={container}
           initial="hidden"
           animate="show"
@@ -87,7 +87,7 @@ export function Hero() {
                 <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-primary" />
               </span>
               <span className="text-foreground/80">
-                Yeni proje başvuruları açık
+                Özgün Hikâyeler, Güçlü Yapımlar
               </span>
             </div>
           </motion.div>
@@ -119,7 +119,7 @@ export function Hero() {
               href="/iletisim"
               className="group inline-flex items-center gap-4 rounded-full lime-pill px-8 py-4 text-base font-semibold shadow-[0_10px_40px_-10px_oklch(0.92_0.22_130/0.7)] transition-transform hover:scale-[1.03]"
             >
-              Proje Başlat
+              Proje Teklifi Gönder
               <span className="grid h-8 w-8 place-items-center rounded-full bg-background text-foreground transition-transform group-hover:rotate-45 text-lg">
                 ↗
               </span>

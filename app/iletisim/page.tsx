@@ -48,8 +48,11 @@ const jsonLd = {
       "name": "İletişim — Meridyen Film Yapım",
       "url": "https://www.meridyenfilm.com/iletisim",
       "mainEntity": {
-        "@type": "Organization",
+        "@type": "LocalBusiness",
         "name": "Meridyen Film Yapım",
+        "image": "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/meridyen-film-yapim-logo.webp",
+        "openingHours": "Mo-Fr 10:00-19:00",
+        "hasMap": "https://maps.google.com/?q=Moda+Caddesi+Kadikoy+Istanbul",
         "contactPoint": [
           {
             "@type": "ContactPoint",

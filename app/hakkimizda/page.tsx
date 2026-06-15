@@ -87,6 +87,23 @@ const jsonLd = {
         ],
       },
     },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://www.meridyenfilm.com/",
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Hakkımızda",
+          "item": "https://www.meridyenfilm.com/hakkimizda",
+        },
+      ],
+    },
   ],
 };
 
@@ -348,7 +365,7 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/#iletisim" className="w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-full bg-primary text-primary-foreground px-8 py-4 text-lg font-semibold transition-transform hover:scale-[1.02]">
-                Proje Başlat
+                Proje Teklifi Gönder
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="rotate-45"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
               </Link>
               <Link href="/oyuncu-basvurusu" className="w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-full border border-border hover:bg-card px-8 py-4 text-lg font-semibold transition-all group">

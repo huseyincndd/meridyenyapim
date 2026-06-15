@@ -34,27 +34,8 @@ import { FadeIn } from "./FadeIn";
 export function Faq() {
   const [open, setOpen] = useState<number | null>(0);
 
-  // Generate JSON-LD Schema for SEO
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map((f) => ({
-      "@type": "Question",
-      "name": f.q,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": f.a
-      }
-    }))
-  };
-
   return (
     <section id="sss" className="mx-auto max-w-5xl px-6 py-24 md:py-32 relative z-10">
-      {/* Inject JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
 
       <FadeIn className="mb-12 text-center">
         <div className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
