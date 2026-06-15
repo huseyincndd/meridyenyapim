@@ -54,13 +54,13 @@ export function Hero() {
           className="flex flex-col gap-8 lg:mt-32"
         >
           <div className="flex items-center gap-4">
-            <div className="relative h-16 w-16 overflow-hidden rounded-full ring-2 ring-background">
+            <a href="https://www.instagram.com/meridyenfilm/" target="_blank" rel="noopener noreferrer" className="relative h-16 w-16 overflow-hidden rounded-full ring-2 ring-background hover:scale-105 transition-transform block">
               <img
                 src="https://villaqrmenu.b-cdn.net/meridyenfilmyapim/meridyen-film-yapim-logo.webp"
                 alt="Meridyen Film Yapım stüdyosu"
                 className="h-full w-full object-cover"
               />
-            </div>
+            </a>
             <div>
               <div className="font-display text-lg">Meridyen Film Yapım</div>
               <div className="text-sm text-muted-foreground">
