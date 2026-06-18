@@ -39,7 +39,7 @@ export function About() {
         <FadeIn delay={150} className="relative">
           <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-border">
             <img
-              src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1400&auto=format&fit=crop"
+              src="https://villaqrmenu.b-cdn.net/meridyenfilmyapim/MER%C4%B0DYEN%20F%C4%B0LM%20YAPIM%20Hik%C3%A2yeleri%20G%C3%B6r%C3%BCnt%C3%BCye%20D%C3%B6n%C3%BC%C5%9Ft%C3%BCren%20Yap%C4%B1m%20%C5%9Eirketi.webp"
               alt="Meridyen Film Yapım prodüksiyon seti — anamorfik kamera"
               className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
               loading="lazy"

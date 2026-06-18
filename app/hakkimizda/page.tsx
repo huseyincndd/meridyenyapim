@@ -141,7 +141,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-7xl">
             <div className="relative aspect-[21/9] w-full overflow-hidden rounded-[2rem] md:rounded-[3rem] border border-border bg-card">
               <img
-                src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?q=80&w=2056&auto=format&fit=crop"
+                src="https://villaqrmenu.b-cdn.net/meridyenfilmyapim/meridyen%20film%20yap%C4%B1m%20hakkimizda.webp"
                 alt="Meridyen Film Yapım sinema ve reklam filmi yapım yönetimi, İstanbul set arkası operasyonu."
                 className="h-full w-full object-cover"
                 loading="lazy"
@@ -170,7 +170,7 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            
+
             <div className="lg:col-span-6 lg:pl-12 flex flex-col justify-center">
               <div className="rounded-[3rem] bg-muted/30 p-10 md:p-14 border border-border relative">
                 <h2 className="font-display text-3xl md:text-4xl mb-6 tracking-[-0.035em]">Neden Varız?</h2>
@@ -199,7 +199,7 @@ export default function AboutPage() {
             <div className="mb-16 text-center">
               <h2 className="font-display text-4xl md:text-6xl tracking-[-0.035em]">Sayısal <span className="italic font-serif text-muted-foreground">Güven.</span></h2>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
               <div className="rounded-[2rem] border border-border bg-card p-8 flex flex-col justify-center items-center text-center hover:border-primary/50 transition-colors">
                 <span className="font-display text-6xl md:text-7xl mb-3">17 Yıl</span>
@@ -320,7 +320,7 @@ export default function AboutPage() {
                     <p className="text-lg text-muted-foreground">{row.d}</p>
                   </div>
                   <div className="grid h-14 w-14 place-items-center rounded-full border border-border text-foreground transition-all group-hover:border-primary group-hover:bg-primary group-hover:text-background shrink-0">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
                   </div>
                 </div>
               </Link>
@@ -342,7 +342,7 @@ export default function AboutPage() {
                 <summary className="flex cursor-pointer items-center justify-between font-display text-xl md:text-2xl list-none [&::-webkit-details-marker]:hidden outline-none">
                   <span className="pr-8">{f.q}</span>
                   <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-border text-xl transition-transform duration-300 group-open:rotate-45 group-open:bg-primary group-open:text-background group-open:border-primary">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 5v14" /><path d="M5 12h14" /></svg>
                   </span>
                 </summary>
                 <div className="mt-8 text-muted-foreground leading-relaxed text-lg animate-in fade-in slide-in-from-top-4 duration-300">
@@ -357,7 +357,7 @@ export default function AboutPage() {
         <section className="dark bg-background text-foreground py-24 md:py-32 rounded-t-[3rem] md:rounded-t-[5rem] px-6">
           <div className="mx-auto max-w-5xl text-center">
             <h2 className="font-display text-4xl md:text-6xl lg:text-[5rem] mb-6 tracking-[-0.035em] leading-[1.1]">
-              Bir Sonraki Hikâyeyi <br/>
+              Bir Sonraki Hikâyeyi <br />
               <span className="italic font-serif text-muted-foreground">Birlikte Başlatalım</span>
             </h2>
             <p className="text-lg md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
@@ -366,11 +366,11 @@ export default function AboutPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/#iletisim" className="w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-full bg-primary text-primary-foreground px-8 py-4 text-lg font-semibold transition-transform hover:scale-[1.02]">
                 Proje Teklifi Gönder
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="rotate-45"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="rotate-45"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
               </Link>
               <Link href="/oyuncu-basvurusu" className="w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-full border border-border hover:bg-card px-8 py-4 text-lg font-semibold transition-all group">
                 Başvuru Formu
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:translate-x-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:translate-x-1"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
               </Link>
             </div>
           </div>

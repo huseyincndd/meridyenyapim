@@ -69,16 +69,8 @@ const jsonLd = [
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Sinema Filmi Yapımı",
-              "url": "https://www.meridyenfilm.com/hizmetler/sinema-filmi",
-            },
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Dizi Yapımı",
-              "url": "https://www.meridyenfilm.com/hizmetler/dizi-yapimi",
+              "name": "Post-Prodüksiyon",
+              "url": "https://www.meridyenfilm.com/hizmetler/post-produksiyon",
             },
           },
           {
@@ -93,18 +85,18 @@ const jsonLd = [
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Dikey Dizi Yapımı",
-              "url": "https://www.meridyenfilm.com/hizmetler/dikey-dizi",
+              "name": "Dizi Yapımı",
+              "url": "https://www.meridyenfilm.com/hizmetler/dizi-yapimi",
             },
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Post-Prodüksiyon",
-              "url": "https://www.meridyenfilm.com/hizmetler/post-produksiyon",
+              "name": "Sinema Filmi Yapımı",
+              "url": "https://www.meridyenfilm.com/hizmetler/sinema-filmi",
             },
-          },
+          }
         ],
       },
     },
@@ -176,34 +168,20 @@ const jsonLd = [
 
 const services = [
   {
-    id: "sinema",
-    title: "Sinema Filmleri",
-    geo: "Uzun Metraj Yapım Şirketi",
-    desc: "Uzun metraj sinema filmi yapımı; senaryo geliştirme ve dramaturji çalışmasından finansman planlamasına, çekim yönetiminden festival ve vizyon dağıtımına uzanan çok katmanlı bir süreçtir. Meridyen Film Yapım, bağımsız sinema diliyle ürettiği uzun metraj projelerde bu sürecin tamamını yönetir.",
+    id: "post",
+    title: "Post-Prodüksiyon",
+    geo: "Post-Prodüksiyon Stüdyosu",
+    desc: "Sahada çekimleri tamamlanan ham görüntüler, stüdyomuzda kurgu (montaj), ses tasarımı, miksaj, görsel efekt (VFX) ve sinematik renk derecelendirme (Color Grading) aşamalarından geçerek nihai haline ulaşır. Kendi yapımlarımızın yanı sıra, harici sinema, dizi ve reklam projelerine de stüdyo hizmeti sağlıyoruz.",
     scope: [
-      "Senaryo geliştirme, dramaturji analizi ve senaryo doktorluğu",
-      "Ulusal (Bakanlık, TRT) ve uluslararası (Eurimages) fon başvuru desteği",
-      "Ortak yapım (co-production) yapılandırması",
-      "4K/8K sinematik kamera sistemleriyle ana çekim yönetimi",
-      "Festival stratejisi, vizyon organizasyonu ve dijital platform teslimi"
+      "Kurgu (montaj) ve alternatif versiyon yönetimi",
+      "Sinematik renk derecelendirme (Color Grading)",
+      "Ses tasarımı, miksaj ve dublaj koordinasyonu",
+      "Görsel efekt (VFX) ve temizlik (cleanup) işlemleri",
+      "Uluslararası teknik teslim (delivery) şartnamelerine uygun çıktı",
+      "Harici projelere yalnızca post-prodüksiyon hizmeti"
     ],
-    link: "/hizmetler/sinema-filmi",
-    image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2025&auto=format&fit=crop"
-  },
-  {
-    id: "dizi",
-    title: "Dizi Yapımları",
-    geo: "Dijital Platform Dizi Prodüksiyonu",
-    desc: "Televizyon kanalları ve global dijital platformlar için çok bölümlü dizi projeleri geliştiriyoruz. Uzun soluklu yapımlar; sürdürülebilir bütçe yönetimi, geniş oyuncu kadrosu koordinasyonu ve bölüm bazlı teslim disiplini gerektirir. Meridyen Film Yapım, dizi yapımının tüm operasyonel yükünü tek merkezden yönetir.",
-    scope: [
-      "Konsept geliştirme, pilot bölüm senaryosu ve sezon planlaması",
-      "Platform teknik şartnamelerine (delivery spec) tam uyumlu üretim",
-      "Cast direktörlüğü ve geniş kadro koordinasyonu",
-      "Bölüm bazlı çekim takvimi ve set lojistiği",
-      "Sezonluk post-prodüksiyon hattı: kurgu, renk, ses, teslim"
-    ],
-    link: "/hizmetler/dizi-yapimi",
-    image: "/images/services/dizi-yapimi.webp"
+    link: "/hizmetler/post-produksiyon",
+    image: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/Meridyen%20film%20yap%C4%B1m%20Post-Prod%C3%BCksiyon.webp"
   },
   {
     id: "reklam",
@@ -218,38 +196,37 @@ const services = [
       "Marka uyumlu renk derecelendirme ve ses miksajı"
     ],
     link: "/hizmetler/reklam-filmi",
-    image: "/images/services/reklam-filmi.webp"
+    image: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/Meridyen%20film%20yap%C4%B1m%20Reklam%20Filmleri.webp"
   },
   {
-    id: "dikey",
-    title: "Dikey Dizi",
-    geo: "Dikey Dizi Formatı",
-    desc: "Dikey dizi; mobil tüketim alışkanlıklarına uygun olarak doğrudan 9:16 formatında üretilen, yüksek kurgu temposuna ve kısa süreli bölümlere sahip yeni nesil içerik formatıdır. Meridyen Film Yapım, geleneksel yapım disiplinini bu yeni formatın dinamikleriyle birleştirerek; kadraj, ritim ve hikâye anlatımı baştan dikey ekran için tasarlanmış projeler üretir.",
+    id: "dizi",
+    title: "Dizi Yapımları",
+    geo: "Dijital Platform Dizi Prodüksiyonu",
+    desc: "Televizyon kanalları ve global dijital platformlar için çok bölümlü dizi projeleri geliştiriyoruz. Uzun soluklu yapımlar; sürdürülebilir bütçe yönetimi, geniş oyuncu kadrosu koordinasyonu ve bölüm bazlı teslim disiplini gerektirir. Meridyen Film Yapım, dizi yapımının tüm operasyonel yükünü tek merkezden yönetir.",
     scope: [
-      "9:16 formatına özgü senaryo ve bölüm mimarisi",
-      "Dikey kadraj için özel çekim tekniği ve set tasarımı",
-      "Mobil platform algoritmalarıyla uyumlu kurgu temposu",
-      "Bölüm başına optimize edilmiş süre ve cliffhanger yapısı",
-      "Platform teknik teslim şartnamelerine uyum"
+      "Konsept geliştirme, pilot bölüm senaryosu ve sezon planlaması",
+      "Platform teknik şartnamelerine (delivery spec) tam uyumlu üretim",
+      "Cast direktörlüğü ve geniş kadro koordinasyonu",
+      "Bölüm bazlı çekim takvimi ve set lojistiği",
+      "Sezonluk post-prodüksiyon hattı: kurgu, renk, ses, teslim"
     ],
-    link: "/hizmetler/dikey-dizi",
-    image: "/images/services/dikey-dizi.webp"
+    link: "/hizmetler/dizi-yapimi",
+    image: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/Meridyen%20film%20yap%C4%B1m%20Dizi%20Yap%C4%B1mlar%C4%B1.webp"
   },
   {
-    id: "post",
-    title: "Post-Prodüksiyon",
-    geo: "Post-Prodüksiyon Stüdyosu",
-    desc: "Sahada çekimleri tamamlanan ham görüntüler, stüdyomuzda kurgu (montaj), ses tasarımı, miksaj, görsel efekt (VFX) ve sinematik renk derecelendirme (Color Grading) aşamalarından geçerek nihai haline ulaşır. Kendi yapımlarımızın yanı sıra, harici sinema, dizi ve reklam projelerine de stüdyo hizmeti sağlıyoruz.",
+    id: "sinema",
+    title: "Sinema Filmleri",
+    geo: "Uzun Metraj Yapım Şirketi",
+    desc: "Uzun metraj sinema filmi yapımı; senaryo geliştirme ve dramaturji çalışmasından finansman planlamasına, çekim yönetiminden festival ve vizyon dağıtımına uzanan çok katmanlı bir süreçtir. Meridyen Film Yapım, bağımsız sinema diliyle ürettiği uzun metraj projelerde bu sürecin tamamını yönetir.",
     scope: [
-      "Kurgu (montaj) ve alternatif versiyon yönetimi",
-      "Sinematik renk derecelendirme (Color Grading)",
-      "Ses tasarımı, miksaj ve dublaj koordinasyonu",
-      "Görsel efekt (VFX) ve temizlik (cleanup) işlemleri",
-      "Uluslararası teknik teslim (delivery) şartnamelerine uygun çıktı",
-      "Harici projelere yalnızca post-prodüksiyon hizmeti"
+      "Senaryo geliştirme, dramaturji analizi ve senaryo doktorluğu",
+      "Ulusal (Bakanlık, TRT) ve uluslararası (Eurimages) fon başvuru desteği",
+      "Ortak yapım (co-production) yapılandırması",
+      "4K/8K sinematik kamera sistemleriyle ana çekim yönetimi",
+      "Festival stratejisi, vizyon organizasyonu ve dijital platform teslimi"
     ],
-    link: "/hizmetler/post-produksiyon",
-    image: "/images/services/post-produksiyon.webp"
+    link: "/hizmetler/sinema-filmi",
+    image: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/meridyen%20film%20yap%C4%B1m%20Sinema%20Filmleri.webp"
   }
 ];
 
@@ -339,6 +316,14 @@ export default function ServicesPage() {
                         loading="lazy"
                         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
+                      {/* Logo Overlay */}
+                      <div className="absolute bottom-6 right-6 z-10 w-12 md:w-16 drop-shadow-md">
+                        <img 
+                          src="https://villaqrmenu.b-cdn.net/meridyenfilmyapim/meridyen-film-yapim-logo.webp" 
+                          alt="Meridyen Film Yapım Logo" 
+                          className="w-full h-auto object-contain"
+                        />
+                      </div>
                     </Link>
                   </div>
                 </div>

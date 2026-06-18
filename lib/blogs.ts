@@ -16,7 +16,7 @@ export const blogs: Blog[] = [
     metaDescription: "Yapım şirketi, prodüksiyon evi ve reklam ajansı arasındaki farklar nelerdir? Yapımcı sette ve masada ne iş yapar? Meridyen Film Yapım'dan sektörel rehber.",
     date: "10 Haziran 2026",
     readTime: "6 dk",
-    image: "https://picsum.photos/seed/meridyen1/1200/800",
+    image: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/Meridyen%20Film%20Yap%C4%B1m%20%C5%9Eirketi%20Nedir%20Film%20ve%20Dizi%20%C3%9Cretim%20S%C3%BCre%C3%A7lerinde%20Yap%C4%B1mc%C4%B1n%C4%B1n%20Rol%C3%BC.webp",
     content: `
       <p class="lead">Yapım şirketi; bir film, dizi, reklam filmi veya dijital içeriğin ilk fikir aşamasından seyirciyle buluşmasına kadar geçen tüm sürecin hukuki, ekonomik, sanatsal ve operasyonel sorumluluğunu üstlenen kurumdur.</p>
       
@@ -55,7 +55,7 @@ export const blogs: Blog[] = [
     metaDescription: "Reklam filmi çekimleri nasıl planlanır? PPM nedir ve neden bu kadar önemlidir? Meridyen Film Yapım'dan reklam prodüksiyonu rehberi.",
     date: "11 Haziran 2026",
     readTime: "5 dk",
-    image: "https://picsum.photos/seed/meridyen2/1200/800",
+    image: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/Reklam%20Filmi%20Yap%C4%B1m%20S%C3%BCreci%20Geli%C5%9Ftirme%2C%20Pre-Prod%C3%BCksiyon%20ve%20Set%20Ortam%C4%B1.webp",
     content: `
       <p class="lead">Sektörde bir söz vardır: "İyi hazırlanmış bir film, çekilmeden önce bitmiştir." Ön-prodüksiyon, kağıttaki senaryoyu fiziksel gerçekliğe çevirme hazırlık sürecidir.</p>
       
@@ -85,7 +85,7 @@ export const blogs: Blog[] = [
     metaDescription: "Film ve reklam filmi yapım süreci nasıl işler? Brifingden teslime 4 ana aşama: Geliştirme, ön-prodüksiyon, çekim ve post-prodüksiyon. 2026 rehberi.",
     date: "12 Haziran 2026",
     readTime: "8 dk",
-    image: "https://picsum.photos/seed/meridyen3/1200/800",
+    image: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/Film%20ve%20Reklam%20Filmi%20Yap%C4%B1m%20S%C3%BCreci%20Fikirden%20Teslime%20Ad%C4%B1m%20Ad%C4%B1m%20Nas%C4%B1l%20%C4%B0%C5%9Fler.webp",
     content: `
       <p class="lead">Bir film, televizyon dizisi veya kurumsal reklam filminin yapım süreci evrensel olarak dört ana bölümden oluşur: Geliştirme, Pre-Prodüksiyon, Prodüksiyon ve Post-Prodüksiyon.</p>
       
@@ -118,7 +118,7 @@ export const blogs: Blog[] = [
     metaDescription: "Film ve reklamcılıkta sanal prodüksiyon (Virtual Production), LED Wall teknolojisi ve yapay zekâ destekli yapım modelleri. 2026 trendleri.",
     date: "14 Haziran 2026",
     readTime: "7 dk",
-    image: "https://picsum.photos/seed/meridyen4/1200/800",
+    image: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/Sanal%20Prod%C3%BCksiyon%20ve%20Yeni%20Nesil%20Film%20Yap%C4%B1m%20Teknolojileri.webp",
     content: `
       <p class="lead">Görsel-işitsel endüstri, sinema tarihinin en radikal teknolojik kırılmalarından birini yaşıyor. Geleneksel yapım modellerinin sınırları; oyun motorları, LED duvarlar ve yapay zekâ ile yeniden çiziliyor.</p>
       

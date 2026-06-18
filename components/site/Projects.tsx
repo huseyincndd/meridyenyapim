@@ -1,76 +1,146 @@
 const top = [
   {
-    title: "Kuzey Rüzgârı",
-    type: "Drama / Uzun Metraj",
-    year: "2025",
-    status: "Vizyonda",
-    img: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1200&auto=format&fit=crop",
-  },
-  {
-    title: "Karanlık Saat",
-    type: "Psikolojik Gerilim",
-    year: "2025",
-    status: "Post-Prodüksiyon",
-    img: "https://images.unsplash.com/photo-1542204165-65bf26472b9b?q=80&w=1200&auto=format&fit=crop",
-  },
-  {
-    title: "İstanbul Meridyeni",
-    type: "Belgesel Dizi",
+    title: "AJet",
+    type: "Reklam Filmi",
     year: "2024",
     status: "Yayında",
-    img: "https://images.unsplash.com/photo-1518132006221-e3eaa0aa1e85?q=80&w=1200&auto=format&fit=crop",
+    img: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/projeler/ajet-meridyen-film-yapim.webp",
   },
   {
-    title: "Son Perde",
-    type: "Dram / Dizi",
+    title: "Akbank",
+    type: "Reklam Filmi",
     year: "2024",
     status: "Yayında",
-    img: "https://images.unsplash.com/photo-1604975999044-188783d54fb3?q=80&w=1200&auto=format&fit=crop",
+    img: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/projeler/akbank-baba-bank-meridyen-film-yapim.webp",
   },
   {
-    title: "Sahne Arkası",
-    type: "Belgesel",
+    title: "Algida",
+    type: "Reklam Filmi",
     year: "2023",
-    status: "Festival",
-    img: "https://images.unsplash.com/photo-1500210600060-44b6bbf83f43?q=80&w=1200&auto=format&fit=crop",
+    status: "TVC",
+    img: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/projeler/algida-meridyen-film-yapim.webp",
+  },
+  {
+    title: "Allianz",
+    type: "Reklam Filmi",
+    year: "2024",
+    status: "Yayında",
+    img: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/projeler/allianz-meridyen-film-yapim.webp",
+  },
+  {
+    title: "Tavuk Dünyası",
+    type: "Reklam Filmi",
+    year: "2023",
+    status: "TVC",
+    img: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/projeler/burasi-tavuk-dunyasi-meridyen-film-yapim.webp",
+  },
+  {
+    title: "Burger King",
+    type: "Reklam Filmi",
+    year: "2024",
+    status: "Yayında",
+    img: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/projeler/burger-king-getir-yemek-meridyen-film-yapim.webp",
+  },
+  {
+    title: "DeFacto",
+    type: "Reklam Filmi",
+    year: "2024",
+    status: "Yayında",
+    img: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/projeler/defacto-meridyen-film-yapim.webp",
+  },
+  {
+    title: "Doritos",
+    type: "Reklam Filmi",
+    year: "2023",
+    status: "TVC",
+    img: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/projeler/doritos-herkes-meridyen-film-yapim.webp",
+  },
+  {
+    title: "Eti",
+    type: "Reklam Filmi",
+    year: "2024",
+    status: "Yayında",
+    img: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/projeler/eti-meridyen-film-yapim.webp",
+  },
+  {
+    title: "Getir",
+    type: "Reklam Filmi",
+    year: "2023",
+    status: "TVC",
+    img: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/projeler/getir-meridyen-film-yapim.webp",
   },
 ];
 
 const bottom = [
   {
-    title: "Anadolu Hikâyeleri",
-    type: "Antoloji Dizi",
-    year: "2025",
-    status: "Geliştirme",
-    img: "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1200&auto=format&fit=crop",
-  },
-  {
-    title: "Mavi Saat",
-    type: "Romantik Drama",
+    title: "Hepsiburada",
+    type: "Reklam Filmi",
     year: "2024",
-    status: "Vizyonda",
-    img: "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1200&auto=format&fit=crop",
-  },
-  {
-    title: "Dikey Hikâyeler",
-    type: "Dikey Dizi",
-    year: "2025",
     status: "Yayında",
-    img: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1200&auto=format&fit=crop",
+    img: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/projeler/hepsiburada-meridyen-film-yapim.webp",
   },
   {
-    title: "Beyoğlu Geceleri",
-    type: "Suç / Dram",
+    title: "İş Bankası",
+    type: "Reklam Filmi",
     year: "2024",
-    status: "Post-Prodüksiyon",
-    img: "https://images.unsplash.com/photo-1518929458119-e5bf444c30f4?q=80&w=1200&auto=format&fit=crop",
+    status: "Yayında",
+    img: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/projeler/is-bankasi-maximum-meridyen-film-yapim.webp",
   },
   {
-    title: "Ses ve Gölge",
-    type: "Sanat Filmi",
+    title: "Karaca",
+    type: "Reklam Filmi",
     year: "2023",
-    status: "Festival",
-    img: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1200&auto=format&fit=crop",
+    status: "TVC",
+    img: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/projeler/karaca-meridyen-film-yapim.webp",
+  },
+  {
+    title: "Kiğılı",
+    type: "Reklam Filmi",
+    year: "2024",
+    status: "Yayında",
+    img: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/projeler/kigili-meridyen-film-yapim.webp",
+  },
+  {
+    title: "LC Waikiki",
+    type: "Reklam Filmi",
+    year: "2023",
+    status: "TVC",
+    img: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/projeler/lc-waikiki-meridyen-film-yapim.webp",
+  },
+  {
+    title: "Lipton Ice Tea",
+    type: "Reklam Filmi",
+    year: "2024",
+    status: "Yayında",
+    img: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/projeler/lipton-ice-tea-meridyen-film-yapim.webp",
+  },
+  {
+    title: "McDonald's",
+    type: "Reklam Filmi",
+    year: "2023",
+    status: "TVC",
+    img: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/projeler/mc-donalds-meridyen-film-yapim.webp",
+  },
+  {
+    title: "Migros",
+    type: "Reklam Filmi",
+    year: "2024",
+    status: "Yayında",
+    img: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/projeler/migros-hemen-meridyen-film-yapim.webp",
+  },
+  {
+    title: "Garanti BBVA",
+    type: "Reklam Filmi",
+    year: "2024",
+    status: "Yayında",
+    img: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/projeler/milyonlarca-garanti-bbva-meridyen-film-yapim.webp",
+  },
+  {
+    title: "Türk Hava Yolları",
+    type: "Reklam Filmi",
+    year: "2023",
+    status: "TVC",
+    img: "https://villaqrmenu.b-cdn.net/meridyenfilmyapim/projeler/turk-hava-yollari-meridyen-film-yapim.webp",
   },
 ];
 
@@ -109,7 +179,7 @@ function Row({ items, direction }: { items: Project[]; direction: "left" | "righ
         <div
           className="flex shrink-0 gap-5 pr-5"
           style={{
-            animation: `marquee 60s linear infinite`,
+            animation: `marquee 150s linear infinite`,
             animationDirection: direction === "right" ? "reverse" : "normal",
           }}
         >
@@ -121,7 +191,7 @@ function Row({ items, direction }: { items: Project[]; direction: "left" | "righ
           className="flex shrink-0 gap-5 pr-5"
           aria-hidden="true"
           style={{
-            animation: `marquee 60s linear infinite`,
+            animation: `marquee 150s linear infinite`,
             animationDirection: direction === "right" ? "reverse" : "normal",
           }}
         >
