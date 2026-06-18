@@ -4,11 +4,11 @@ import { useState } from "react";
 
 const pressItems = [
   {
-    outlet: "Meridyen Medya",
+    outlet: "Ekonomi Business",
     title: "Meridyen Film Yapım, Yeni Sinema Projesiyle Uluslararası Arenaya Açılıyor",
   },
   {
-    outlet: "Meridyen Türkiye",
+    outlet: "Breaking Post",
     title: "Bağımsız Sinemada Yeni Dönem: Meridyen Film Yapım’dan Avrupa Ortak Yapımı",
   },
   {
@@ -16,7 +16,7 @@ const pressItems = [
     title: "Televizyon ve Dijital Platformlarda Meridyen Film Yapım İmzası",
   },
   {
-    outlet: "Meridyen Reporter",
+    outlet: "News Portal",
     title: "Küresel Eğilimleri Yakalamak: Meridyen Film Yapım ve Dikey Dizi Formatları",
   },
   {

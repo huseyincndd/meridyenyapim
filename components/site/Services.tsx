@@ -68,7 +68,7 @@ export function Services() {
                   src={s.img}
                   alt={s.title}
                   loading="lazy"
-                  className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                  className="h-full w-full object-cover grayscale-0 md:grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
                 />
                 <span className="absolute left-4 top-4 rounded-full bg-foreground text-primary px-3 py-1 font-display text-sm shadow-md">
                   {s.n}

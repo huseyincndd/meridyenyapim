@@ -215,7 +215,7 @@ export function Projects() {
         </div>
         <h2 className="font-display text-4xl tracking-[-0.035em] md:text-6xl">
           Öne çıkan{" "}
-          <span className="italic font-serif text-muted-foreground">projelerimiz.</span>
+          <span className="italic font-serif text-muted-foreground">çalışmalarımız.</span>
         </h2>
       </FadeIn>
       <div className="flex flex-col gap-6">
